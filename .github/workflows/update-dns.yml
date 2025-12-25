@@ -36,4 +36,4 @@ jobs:
           IP_URL: ${{ secrets.IP_URL }}
           CF_ACCOUNTS: ${{ secrets.CF_ACCOUNTS }}
         run: |
-          python py/test.py    # ← 这里改成 py/test.py 就对了！
+          python py/test.py
