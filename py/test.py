@@ -1,24 +1,23 @@
-import requests
-import random
-import time
 import os
 import sys
+import json
 
-# ============ 配置从环境变量读取（GitHub Secrets） ============
-SUBDOMAIN_PREFIX = os.getenv("SUBDOMAIN_PREFIX", "hao")
-TTL = int(os.getenv("TTL", "120"))
-PROXIED = os.getenv("PROXIED", "false").lower() == "true"
-RECORDS_PER_DOMAIN = int(os.getenv("RECORDS_PER_DOMAIN", "4"))
-IP_URL = os.getenv("https://565a.bou.qzz.io/ip.txt")  # 必须设置，例如 https://565a.bou.qzz.io/ip.txt
-
-# Cloudflare 账号配置（JSON 格式，从 Secrets 读取）
-CF_ACCOUNTS_JSON = os.getenv("CF_ACCOUNTS")
-if not CF_ACCOUNTS_JSON:
-    print("❌ 错误：未设置 CF_ACCOUNTS 环境变量")
+# ============ 必填配置检查 ============
+required_vars = ["IP_URL", "CF_ACCOUNTS"]
+missing = [var for var in required_vars if not os.getenv(var)]
+if missing:
+    print(f"❌ 错误：缺少必需的环境变量: {', '.join(missing)}")
     sys.exit(1)
 
+SUBDOMAIN_PREFIX = os.getenv("SUBDOMAIN_PREFIX", "hao").strip() or "hao"
+TTL = int(os.getenv("TTL", "120").strip() or "120")
+PROXIED = os.getenv("PROXIED", "false").strip().lower() == "true"
+RECORDS_PER_DOMAIN = int(os.getenv("RECORDS_PER_DOMAIN", "4").strip() or "4")
+IP_URL = os.getenv("https://565a.bou.qzz.io/ip.txt").strip()
+
+# CF_ACCOUNTS JSON 解析
+CF_ACCOUNTS_JSON = os.getenv("CF_ACCOUNTS")
 try:
-    import json
     CF_ACCOUNTS = json.loads(CF_ACCOUNTS_JSON)
 except json.JSONDecodeError as e:
     print(f"❌ CF_ACCOUNTS JSON 格式错误: {e}")
