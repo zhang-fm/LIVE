@@ -27,7 +27,7 @@ jobs:
         env:
           PROXY: "http://127.0.0.1:7890"  # 如果不需要代理可留空
         run: |
-          python py/test_playwright_github.py
+          python py/hotel.py
 
       - name: Commit & push results
         run: |
