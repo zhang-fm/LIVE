@@ -25,7 +25,7 @@ jobs:
 
       - name: Run scraper
         run: |
-          python py/hotel.py
+          python py/hotel_github.py
 
       - name: Commit & push results
         run: |
