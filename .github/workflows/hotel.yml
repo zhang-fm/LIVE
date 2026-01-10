@@ -1,0 +1,35 @@
+name: Hotel IPTV Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"   # 每12小时一次（非常安全）
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run hotel IPTV script
+        run: |
+          python py/hotel_github.py
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add test/*.m3u || true
+          git commit -m "Auto update hotel IPTV m3u" || echo "No changes"
+          git push
