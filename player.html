@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>M3U8/HLS Online Player - M3U8 Player</title>
+    <meta name="description"
+          content="M3U8Player is a Chrome browser extension tool that implements an HTTP Live Streaming (HLS) client. It allows you to play .m3u8 HTTP Live Streaming (HLS) content. It relies on HTML5 video and Media Source Extensions for playback. Its working principle involves converting MPEG-2 Transport Stream and AAC/MP3 streams into ISO BMFF (MP4) segments."/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex">
+
+    <link rel="canonical" href="https://m3u8player.org/player.html">
+
+    <script src="/js/jquery.min.js"></script>
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/social-share.js/1.0.16/css/share.min.css">
+    <script src="https://cdn.staticfile.org/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+    <link href="https://web.sdk.qcloud.com/player/tcplayer/release/v5.1.0/tcplayer.min.css" rel="stylesheet"/>
+    <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v5.1.0/tcplayer.v5.1.0.min.js"></script>
+
+
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id: "3G9QRCtAm0z4ABfe", ck: "3G9QRCtAm0z4ABfe"})</script>
+
+ 
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRZ2D9XH84"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRZ2D9XH84');
+</script>
+
+
+<script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTplMDAwNjNkYS02NmI1LTQ5NTUtODg1MC04Mzk2MDgzYTAxYmU=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<video id="player-container-id" preload="auto" playsinline webkit-playsinline style="width: 100%;height: 100%;">
+</video>
+
+
+
+
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    let url = getUrlParam("url");
+    // url = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
+    console.log(url)
+
+    var player = TCPlayer('player-container-id', {
+        sources: [{
+            src: url,
+        }],
+        licenseUrl: 'https://license.vod2.myqcloud.com/license/v2/1251321133_1/v_cube.license',
+    });
+
+    player.src(url); // url 播放地址
+</script>
+
+
+
+
+</body>
+
+</html>
