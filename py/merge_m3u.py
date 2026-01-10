@@ -18,22 +18,32 @@ def clean_group_title(line):
     return line
 
 def fix_content(line):
-    """修复台标和 ID"""
+    """修复台标、ID，并清洗频道显示名称"""
     if not line.startswith("#EXTINF"): return line
     name_match = re.search(r",([^,\n\r]+)$", line)
     if not name_match: return line
+    
     raw_name = name_match.group(1).strip()
     
-    # 归一化频道名用于匹配台标 (CCTV1-综合HD -> CCTV1)
-    clean = raw_name.replace("HD","").replace("高清","").replace("-综合","").replace("综合","").replace(" ","").replace("中央","CCTV")
+    # --- 新增：清洗显示名称（去掉末尾的 HD、高清、超清等） ---
+    # 使用正则匹配末尾的干扰词，忽略大小写
+    display_name = re.sub(r'([-_\s]?(HD|高清|超清|SD))$', '', raw_name, flags=re.I).strip()
+    # 将清洗后的名字应用回 line 的末尾（逗号后面）
+    line = line.replace(f",{raw_name}", f",{display_name}")
+    # ---------------------------------------------------
+
+    # 归一化频道名用于匹配台标 (逻辑保持不变)
+    clean = display_name.replace("-综合","").replace("综合","").replace(" ","").replace("中央","CCTV")
     cctv = re.search(r"(CCTV\d+)", clean, re.I)
     if cctv: clean = cctv.group(1).upper()
 
     logo = f'tvg-logo="{LOGO_BASE_URL}/{clean}.png"'
-    tid = f'tvg-id="{raw_name}"'
+    # ID 建议使用清洗后的名字，匹配 EPG 更准确
+    tid = f'tvg-id="{display_name}"'
     
     line = re.sub(r'tvg-logo=".*?"', logo, line) if 'tvg-logo="' in line else line.replace("#EXTINF:-1", f"#EXTINF:-1 {logo}")
     line = re.sub(r'tvg-id=".*?"', tid, line) if 'tvg-id="' in line else line.replace("#EXTINF:-1", f"#EXTINF:-1 {tid}")
+    
     return line
 
 def main():
