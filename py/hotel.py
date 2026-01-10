@@ -5,7 +5,7 @@ import time
 
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "test"
-MAX_IP_COUNT = 8  # 稍微增加几个，因为后面会有去重
+MAX_IP_COUNT = 6  # 稍微增加几个，因为后面会有去重
 TIMEOUT = 6
 
 PRIMARY_PORTS = [8082, 9901, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808]
