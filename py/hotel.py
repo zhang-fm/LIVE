@@ -33,7 +33,7 @@ def main():
             try:
                 r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
                 if r.status_code == 200 and "#EXTINF" in r.text:
-                    filename = f"raw_{ip}_{port}.m3u"
+                    filename = f"channels_{ip}_{port}.m3u"
                     with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
                         f.write(r.text)
                     print(f"  ✅ 成功保存: {filename}")
