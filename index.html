@@ -18,67 +18,69 @@ video{
     object-fit:contain;
     background:#000;
 }
-#overlay{
+.tip{
+    color:#fff;
+    font-size:22px;
+    text-align:center;
     position:absolute;
     inset:0;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:rgba(0,0,0,.6);
-    color:#fff;
-    font-size:22px;
-    cursor:pointer;
-}
-.tip{
-    text-align:center;
-    padding:20px;
 }
 </style>
 </head>
 <body>
 
-<video id="video" controls playsinline webkit-playsinline></video>
-<div id="overlay" style="display:none">
-    <div class="tip">点击播放</div>
-</div>
+<video id="video"
+       controls
+       autoplay
+       muted
+       playsinline
+       webkit-playsinline></video>
+
+<div id="tip" class="tip" style="display:none"></div>
 
 <script>
 const url = new URLSearchParams(location.search).get('url');
 const video = document.getElementById('video');
-const overlay = document.getElementById('overlay');
+const tip = document.getElementById('tip');
 
 if (!url) {
-    overlay.style.display = 'flex';
-    overlay.innerHTML = `
-        <div class="tip">
-            使用方法：<br><br>
-            域名后加 ?url=你的m3u8<br><br>
-            示例：<br>
-            https://你的域名/?url=https://example.com/xxx.m3u8
-        </div>`;
+    tip.style.display = 'flex';
+    tip.innerHTML = `
+        使用方法：<br><br>
+        域名后加 ?url=你的m3u8<br><br>
+        示例：<br>
+        https://你的域名/?url=https://example.com/xxx.m3u8
+    `;
 } else {
-    overlay.style.display = 'flex';
+    let restored = false;
+    const targetVolume = 0.1;
 
-    overlay.onclick = () => {
-        overlay.style.display = 'none';
+    function restoreVolume() {
+        if (restored) return;
+        video.muted = false;
+        video.volume = targetVolume;
+        restored = true;
+    }
 
-        video.volume = 0.01;   // ✅ 真正生效
-        video.muted = true;
+    // 任意用户行为即恢复音量
+    ['click','touchstart','keydown','mousemove'].forEach(ev=>{
+        document.addEventListener(ev, restoreVolume, { once:true });
+    });
 
-        if (Hls.isSupported()) {
-            const hls = new Hls({
-                maxBufferLength: 60,
-                maxMaxBufferLength: 120,
-                startLevel: -1, // 自动最高画质
-            });
-            hls.loadSource(url);
-            hls.attachMedia(video);
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = url;
-        }
-
-        video.play();
-    };
+    if (Hls.isSupported()) {
+        const hls = new Hls({
+            maxBufferLength: 60,
+            maxMaxBufferLength: 120,
+            startLevel: -1
+        });
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+    }
 }
 </script>
 
