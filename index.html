@@ -34,41 +34,39 @@
     </style>
 </head>
 <body>
-    <video id="video" controls autoplay playsinline webkit-playsinline></video>
+    <video id="video" controls autoplay muted playsinline webkit-playsinline></video>
 
-<script>
-    // 获取 URL 参数 ?url=
-    const urlParam = new URLSearchParams(location.search).get('url');
+    <script>
+        // 获取 URL 参数 ?url=
+        const urlParam = new URLSearchParams(location.search).get('url');
 
-    const video = document.getElementById('video');
+        const video = document.getElementById('video');
 
-    if (!urlParam) {
-        // 没有提供 url 时显示提示
-        document.body.innerHTML = '<div class="tip">使用方法：<br>在域名后添加 ?url=你的m3u8地址<br><br>例如：<br>https://yourdomain.com/?url=https://example.com/stream.m3u8</div>';
-    } else {
-        // 支持 HLS.js 的浏览器
-        if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(urlParam);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                video.play();
-                video.volume = 0.1;  // 这里设置默认音量很小（0.0~1.0，可自行调整）
-            });
+        if (!urlParam) {
+            // 没有提供 url 时显示提示
+            document.body.innerHTML = '<div class="tip">使用方法：<br>在域名后添加 ?url=你的m3u8地址<br><br>例如：<br>https://yourdomain.com/?url=https://example.com/stream.m3u8</div>';
+        } else {
+            // 支持 HLS.js 的浏览器
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(urlParam);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                });
+            }
+            // Safari 等原生支持 HLS 的浏览器
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = urlParam;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                });
+            }
+            // 不支持的情况
+            else {
+                document.body.innerHTML = '<div class="tip">您的浏览器不支持 HLS 播放</div>';
+            }
         }
-        // Safari 等原生支持 HLS 的浏览器
-        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = urlParam;
-            video.addEventListener('loadedmetadata', () => {
-                video.play();
-                video.volume = 0.1;  // 这里同样设置默认音量很小
-            });
-        }
-        // 不支持的情况
-        else {
-            document.body.innerHTML = '<div class="tip">您的浏览器不支持 HLS 播放</div>';
-        }
-    }
-</script>
+    </script>
 </body>
 </html>
