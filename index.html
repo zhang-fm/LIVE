@@ -41,10 +41,10 @@
         const urlParam = new URLSearchParams(location.search).get('url');
         const video = document.getElementById('video');
 
-        // 设置默认音量为 1
+        // 设置默认音量为 1，并强制设置
         video.volume = 1;
 
-        // 监听音频的静音状态，解除静音时音量设为 1
+        // 禁止解除静音时音量恢复为 100
         video.onvolumechange = function() {
             if (!video.muted) {
                 video.volume = 1;
@@ -76,6 +76,13 @@
                 document.body.innerHTML = '<div class="tip">您的浏览器不支持 HLS 播放</div>';
             }
         }
+
+        // 监听静音状态变化，解除静音时保持音量为1
+        video.addEventListener('volumechange', function() {
+            if (!video.muted) {
+                video.volume = 1;
+            }
+        });
     </script>
 </body>
 </html>
