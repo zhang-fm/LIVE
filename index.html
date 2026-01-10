@@ -44,6 +44,13 @@
         // 设置默认音量为 1
         video.volume = 1;
 
+        // 监听音频的静音状态，解除静音时音量设为 1
+        video.onvolumechange = function() {
+            if (!video.muted) {
+                video.volume = 1;
+            }
+        };
+
         // 如果没有提供 URL 参数，显示提示
         if (!urlParam) {
             document.body.innerHTML = '<div class="tip">使用方法：<br>在域名后添加 ?url=你的m3u8地址<br><br>例如：<br>https://yourdomain.com/?url=https://example.com/stream.m3u8</div>';
