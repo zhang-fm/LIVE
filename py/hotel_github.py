@@ -1,90 +1,113 @@
-import asyncio
-import base64
-import os
+import requests
 import re
-from playwright.async_api import async_playwright
+import os
+import time
 
-BASE_URL = "https://iptv.cqshushu.com/?t=hotel"
-OUT_FILE = "test/hotel_m3u_links.txt"
+# ======================
+# 基础配置
+# ======================
+HOME_URL = "https://iptv.cqshushu.com/"
+OUTPUT_DIR = "test"
+MAX_IP_COUNT = 6
+TIMEOUT = 6
 
-async def main():
-    os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
+# 高命中端口池（优先级从高到低）
+PRIMARY_PORTS = [
+    8082, 9901, 8080, 8000,
+    9999, 8888, 8090, 8081,
+    8181, 8899, 8001,85,808
+]
 
-    async with async_playwright() as p:
-        # 启动 Chromium 浏览器（无头）
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                       "AppleWebKit/537.36 (KHTML, like Gecko) "
-                       "Chrome/117.0.0.0 Safari/537.36",
-            viewport={"width": 1280, "height": 720},
-        )
-        page = await context.new_page()
+SECONDARY_PORTS = [
+    8088, 8001, 8899, 10000,
+    18080, 28080
+]
 
-        print("="*80)
-        print(f"访问首页: {BASE_URL}", flush=True)
-        try:
-            await page.goto(BASE_URL, timeout=60000)
-            await page.wait_for_timeout(3000)  # 等 3 秒，等待 JS 渲染
-            print("[成功] 首页加载完成", flush=True)
-        except Exception as e:
-            print(f"[异常] 首页访问失败: {e}", flush=True)
-            await browser.close()
-            return
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+}
 
-        # 获取所有 IP
-        ip_elements = await page.query_selector_all("a.ip-link")
-        ips = []
-        for el in ip_elements:
-            onclick_attr = await el.get_attribute("onclick")
-            if onclick_attr:
-                m = re.search(r"gotoIP\('([^']+)'", onclick_attr)
-                if m:
-                    try:
-                        ip = base64.b64decode(m.group(1)).decode()
-                        ips.append(ip)
-                    except Exception as e:
-                        print(f"[异常] base64 decode 失败: {e}", flush=True)
+# ======================
+# 工具函数
+# ======================
+def fetch_homepage_ips():
+    """
+    抓取首页中按页面顺序出现的 IP
+    """
+    print("📥 获取首页 IP（按页面顺序）...")
+    r = requests.get(HOME_URL, headers=HEADERS, timeout=TIMEOUT)
+    r.raise_for_status()
 
-        print(f"✔ 发现 IP 数量: {len(ips)}", flush=True)
-        print(f"IP 列表: {ips}", flush=True)
+    ips = []
+    for ip in re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text):
+        if ip not in ips:
+            ips.append(ip)
+        if len(ips) >= MAX_IP_COUNT:
+            break
 
-        all_links = []
+    print(f"共加载 {len(ips)} 个 IP")
+    return ips
 
-        for ip in ips:
-            print(f"\n处理 IP: {ip}", flush=True)
-            try:
-                # 模拟点击 IP 进入详情页
-                await page.evaluate(f"""
-                    () => {{
-                        const ipEl = Array.from(document.querySelectorAll('a.ip-link'))
-                                      .find(el => el.textContent.includes('{ip}'));
-                        if(ipEl) ipEl.click();
-                    }}
-                """)
-                # 等待下载 M3U 链接出现
-                await page.wait_for_selector("div.download-section a.download-btn.m3u", timeout=15000)
-                m3u_link_el = await page.query_selector("div.download-section a.download-btn.m3u")
-                if m3u_link_el:
-                    href = await m3u_link_el.get_attribute("href")
-                    full_link = f"http://iptv.cqshushu.com/{href.lstrip('?')}"
-                    all_links.append(full_link)
-                    print(f"  └─ M3U 链接: {full_link}", flush=True)
-                else:
-                    print(f"  └─ 未找到 M3U 下载链接", flush=True)
-            except Exception as e:
-                print(f"  └─ [异常] {e}", flush=True)
 
-        await browser.close()
+def try_download(ip, port):
+    """
+    尝试下载 m3u 文件
+    """
+    url = (
+        "https://iptv.cqshushu.com/"
+        f"?s={ip}:{port}&t=hotel&channels=1&download=m3u"
+    )
 
-    # 保存结果
-    with open(OUT_FILE, "w", encoding="utf-8") as f:
-        for link in sorted(set(all_links)):
-            f.write(link + "\n")
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code == 200 and "#EXTM3U" in r.text:
+            size_kb = len(r.content) // 1024
+            channels = r.text.count("#EXTINF")
+            return r.text, channels, size_kb
+    except requests.RequestException:
+        pass
 
-    print("="*80)
-    print(f"完成，共获取 {len(all_links)} 条 M3U", flush=True)
-    print(f"保存至 {OUT_FILE}", flush=True)
+    return None, 0, 0
+
+
+# ======================
+# 主流程
+# ======================
+def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    ips = fetch_homepage_ips()
+    if not ips:
+        print("❌ 未获取到任何 IP")
+        return
+
+    for ip in ips:
+        print(f"\n🔍 扫描 IP: {ip}")
+        found = False
+
+        for port in PRIMARY_PORTS + SECONDARY_PORTS:
+            print(f"  ➜ 尝试端口 {port} ...", end=" ")
+            content, channels, size_kb = try_download(ip, port)
+
+            if content:
+                print(f"✅ 命中 | 频道:{channels} | 大小:{size_kb}KB")
+                filename = f"channels_{ip}_{port}.m3u"
+                path = os.path.join(OUTPUT_DIR, filename)
+
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(content)
+
+                print(f"     保存: {path}")
+                found = True
+                break
+            else:
+                print("❌")
+
+            time.sleep(1.2)  # 降速，模拟正常用户
+
+        if not found:
+            print("  ⛔ 本 IP 未发现有效端口")
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
