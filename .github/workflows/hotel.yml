@@ -24,7 +24,7 @@ jobs:
 
       - name: Run hotel IPTV script
         run: |
-          python py/hotel_github.py
+          python py/hotel.py
 
       - name: Commit and push results
         run: |
