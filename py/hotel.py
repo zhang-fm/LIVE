@@ -34,8 +34,9 @@ def get_headers():
     }
 
 def get_fofa_ports(ip):
-    """带高度随机延时的 FOFA 探测逻辑"""
-    # 随机休眠 5 到 12 秒，模拟人类在网页点击的间隔
+    """
+    改进版 FOFA 端口抓取：匹配更灵活的网页结构
+    """
     sleep_time = random.uniform(5, 12)
     print(f"   ⏳ FOFA 冷却中 ({sleep_time:.1f}s)... ", end="", flush=True)
     time.sleep(sleep_time)
@@ -47,17 +48,33 @@ def get_fofa_ports(ip):
         res = requests.get(search_url, headers=get_headers(), timeout=15)
         
         if "验证码" in res.text or "429 Too Many Requests" in res.text:
-            print("❌ 被拦截")
-            return None # 触发风控
+            print("❌ 被拦截 (触发风控)")
+            return None 
         
-        # 提取端口：匹配 1.2.3.4:8080 这种格式
-        found_ports = re.findall(rf'{ip}:(\d+)', res.text)
-        ports = list(set([int(p) for p in found_ports]))
-        print(f"✅ 探测到端口: {ports}")
-        return ports
+        # --- 改进的正则匹配策略 ---
+        # 1. 匹配链接中的端口，如 <a href="http://1.1.1.1:8080"
+        ports_in_links = re.findall(rf'{ip}:(\d+)', res.text)
+        
+        # 2. 匹配 FOFA 特有的端口展示标签，如 <a class="port-item">8080</a>
+        # 我们寻找在 IP 出现后附近的端口项
+        ports_in_tags = re.findall(r'class="port-item">(\d+)</a>', res.text)
+        
+        # 合并所有发现，排除掉常见的 22 (SSH), 23 (Telnet), 443 等非酒店端口
+        all_found = list(set([int(p) for p in (ports_in_links + ports_in_tags)]))
+        
+        # 过滤掉不需要的干扰端口
+        ignore_ports = {22, 23, 443, 80, 53, 3389}
+        final_ports = [p for p in all_found if p not in ignore_ports]
+        
+        if final_ports:
+            print(f"✅ 探测到: {final_ports}")
+        else:
+            print("❓ 未在页面发现开放端口")
+            
+        return final_ports
     except Exception as e:
         print(f"❌ 出错: {e}")
-        return []
+        return [][]
 
 def scan_ip_port(ip, port):
     """执行最终的 m3u 抓取"""
