@@ -507,6 +507,26 @@ http://106.115.18.78:9901/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=1&amp;
 http://106.115.18.78:9901/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="河北影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/河北影视.png" group-title="河北电信",河北影视
 http://106.115.18.78:9901/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV7.png" group-title="广东电信",CCTV7-军农
+http://125.94.175.91:20443/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-16" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV-16.png" group-title="广东电信",CCTV-16
+http://125.94.175.91:20443/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="经济科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/经济科教.png" group-title="广东电信",经济科教
+http://125.94.175.91:20443/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="广东电信",广东体育
+http://125.94.175.91:20443/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="大湾区卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/大湾区卫视.png" group-title="广东电信",大湾区卫视
+http://125.94.175.91:20443/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东影视.png" group-title="广东电信",广东影视
+http://125.94.175.91:20443/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东民生" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东民生.png" group-title="广东电信",广东民生
+http://125.94.175.91:20443/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东少儿.png" group-title="广东电信",广东少儿
+http://125.94.175.91:20443/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东新闻.png" group-title="广东电信",广东新闻
+http://125.94.175.91:20443/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/嘉佳卡通.png" group-title="广东电信",嘉佳卡通
+http://125.94.175.91:20443/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png" group-title="广西联通",CCTV1-综合
 http://171.38.148.103:8082/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV2.png" group-title="广西联通",CCTV2-财经
