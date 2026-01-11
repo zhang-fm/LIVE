@@ -8,7 +8,7 @@ HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "test"
 MAX_IP_COUNT = 6  # 增加抓取数量
 TIMEOUT = 6
-PRIMARY_PORTS = [8082, 9901, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808]
+PRIMARY_PORTS = [8082, 9901, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808,20443,888,9003]
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
 def main():
