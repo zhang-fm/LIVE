@@ -1,0 +1,129 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="中央1综合高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央1综合高清
+http://113.9.162.174:9003/hls/2001/index.m3u8
+#EXTINF:-1 tvg-id="中央2财经高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央2财经高清
+http://113.9.162.174:9003/hls/2002/index.m3u8
+#EXTINF:-1 tvg-id="中央3综艺高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央3综艺高清
+http://113.9.162.174:9003/hls/2003/index.m3u8
+#EXTINF:-1 tvg-id="中央4国际高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央4国际高清
+http://113.9.162.174:9003/hls/2004/index.m3u8
+#EXTINF:-1 tvg-id="中央5体育高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央5体育高清
+http://113.9.162.174:9003/hls/2005/index.m3u8
+#EXTINF:-1 tvg-id="中央6电影高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央6电影高清
+http://113.9.162.174:9003/hls/2006/index.m3u8
+#EXTINF:-1 tvg-id="中央7军事高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央7军事高清
+http://113.9.162.174:9003/hls/2007/index.m3u8
+#EXTINF:-1 tvg-id="中央8电视剧高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央8电视剧高清
+http://113.9.162.174:9003/hls/2008/index.m3u8
+#EXTINF:-1 tvg-id="中央9记录高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央9记录高清
+http://113.9.162.174:9003/hls/2009/index.m3u8
+#EXTINF:-1 tvg-id="中央10科技高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央10科技高清
+http://113.9.162.174:9003/hls/2010/index.m3u8
+#EXTINF:-1 tvg-id="中央11戏曲高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央11戏曲高清
+http://113.9.162.174:9003/hls/2011/index.m3u8
+#EXTINF:-1 tvg-id="中央12法治高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央12法治高清
+http://113.9.162.174:9003/hls/2012/index.m3u8
+#EXTINF:-1 tvg-id="中央13新闻高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央13新闻高清
+http://113.9.162.174:9003/hls/2013/index.m3u8
+#EXTINF:-1 tvg-id="中央14少儿高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央14少儿高清
+http://113.9.162.174:9003/hls/2014/index.m3u8
+#EXTINF:-1 tvg-id="中央15音乐高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央15音乐高清
+http://113.9.162.174:9003/hls/2015/index.m3u8
+#EXTINF:-1 tvg-id="中央16奥林匹克" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央16奥林匹克
+http://113.9.162.174:9003/hls/2016/index.m3u8
+#EXTINF:-1 tvg-id="中央17农业高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央17农业高清
+http://113.9.162.174:9003/hls/2017/index.m3u8
+#EXTINF:-1 tvg-id="中央-5+体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央-5+体育
+http://113.9.162.174:9003/hls/2018/index.m3u8
+#EXTINF:-1 tvg-id="中央教育1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央教育1
+http://113.9.162.174:9003/hls/2019/index.m3u8
+#EXTINF:-1 tvg-id="中央教育2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央教育2
+http://113.9.162.174:9003/hls/2020/index.m3u8
+#EXTINF:-1 tvg-id="中央教育4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",中央教育4
+http://113.9.162.174:9003/hls/2021/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江卫视高清
+http://113.9.162.174:9003/hls/2022/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江都市高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江都市高清
+http://113.9.162.174:9003/hls/2023/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江农业科教高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江农业科教高清
+http://113.9.162.174:9003/hls/2024/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江新闻法制高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江新闻法制高清
+http://113.9.162.174:9003/hls/2025/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江少儿高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江少儿高清
+http://113.9.162.174:9003/hls/2026/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江文体高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江文体高清
+http://113.9.162.174:9003/hls/2027/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江影视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",黑龙江影视高清
+http://113.9.162.174:9003/hls/2028/index.m3u8
+#EXTINF:-1 tvg-id="哈尔滨影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",哈尔滨影视
+http://113.9.162.174:9003/hls/2029/index.m3u8
+#EXTINF:-1 tvg-id="哈尔滨生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",哈尔滨生活
+http://113.9.162.174:9003/hls/2030/index.m3u8
+#EXTINF:-1 tvg-id="哈尔滨新闻综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",哈尔滨新闻综合
+http://113.9.162.174:9003/hls/2031/index.m3u8
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",天津卫视
+http://113.9.162.174:9003/hls/2040/index.m3u8
+#EXTINF:-1 tvg-id="吉林卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",吉林卫视高清
+http://113.9.162.174:9003/hls/2041/index.m3u8
+#EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",延边卫视
+http://113.9.162.174:9003/hls/2042/index.m3u8
+#EXTINF:-1 tvg-id="辽宁卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",辽宁卫视高清
+http://113.9.162.174:9003/hls/2043/index.m3u8
+#EXTINF:-1 tvg-id="北京卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",北京卫视高清
+http://113.9.162.174:9003/hls/2044/index.m3u8
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",东方卫视
+http://113.9.162.174:9003/hls/2045/index.m3u8
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",湖南卫视
+http://113.9.162.174:9003/hls/2046/index.m3u8
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",湖北卫视
+http://113.9.162.174:9003/hls/2047/index.m3u8
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",河北卫视
+http://113.9.162.174:9003/hls/2048/index.m3u8
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",安徽卫视
+http://113.9.162.174:9003/hls/2049/index.m3u8
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",广东卫视
+http://113.9.162.174:9003/hls/2050/index.m3u8
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",深圳卫视
+http://113.9.162.174:9003/hls/2051/index.m3u8
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",江苏卫视
+http://113.9.162.174:9003/hls/2052/index.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",浙江卫视
+http://113.9.162.174:9003/hls/2053/index.m3u8
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",山东卫视
+http://113.9.162.174:9003/hls/2054/index.m3u8
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",四川卫视
+http://113.9.162.174:9003/hls/2055/index.m3u8
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",江西卫视
+http://113.9.162.174:9003/hls/2056/index.m3u8
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",贵州卫视
+http://113.9.162.174:9003/hls/2057/index.m3u8
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",山西卫视
+http://113.9.162.174:9003/hls/2058/index.m3u8
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",广西卫视
+http://113.9.162.174:9003/hls/2059/index.m3u8
+#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",青海卫视
+http://113.9.162.174:9003/hls/2060/index.m3u8
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",陕西卫视
+http://113.9.162.174:9003/hls/2061/index.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",河南卫视
+http://113.9.162.174:9003/hls/2062/index.m3u8
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",重庆卫视
+http://113.9.162.174:9003/hls/2063/index.m3u8
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",甘肃卫视
+http://113.9.162.174:9003/hls/2064/index.m3u8
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",内蒙古卫视
+http://113.9.162.174:9003/hls/2065/index.m3u8
+#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",新疆卫视
+http://113.9.162.174:9003/hls/2066/index.m3u8
+#EXTINF:-1 tvg-id="兵团卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",兵团卫视
+http://113.9.162.174:9003/hls/2067/index.m3u8
+#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",西藏卫视
+http://113.9.162.174:9003/hls/2068/index.m3u8
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",云南卫视
+http://113.9.162.174:9003/hls/2069/index.m3u8
+#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",宁夏卫视
+http://113.9.162.174:9003/hls/2070/index.m3u8
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",东南卫视
+http://113.9.162.174:9003/hls/2071/index.m3u8
+#EXTINF:-1 tvg-id="海南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="黑龙江省哈尔滨市酒店 黑龙江联通",海南卫视
+http://113.9.162.174:9003/hls/2072/index.m3u8
