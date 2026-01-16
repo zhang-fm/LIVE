@@ -32,18 +32,18 @@ jobs:
       - name: Grab multicast sources
         run: python py/grab_multicast.py
 
-      # 步骤2：合并 & 清洗所有小文件 → 生成 clean_all_multicast.m3u
-      - name: Merge and clean multicast m3u files
+      # 步骤2：合并 & 清洗所有小文件 → 生成 all_multicast.m3u
+      - name: Merge and clean multicast files
         run: python py/merge_clean_multicast.py
 
-      # 步骤3：提交变更（包含原始小文件 + 清洗后的大文件）
+      # 步骤3：提交变更（包含原始小文件 + 合并后的大文件）
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           git add test_multicast/*.m3u || true
-          git add clean_all_multicast.m3u || true
+          git add test_multicast/all_multicast.m3u || true  # 大文件
           
           git status --short
           
@@ -52,7 +52,7 @@ jobs:
             exit 0
           fi
           
-          git commit -m "自动抓取 & 清洗合并组播源 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "自动抓取 & 合并清洗组播源 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           
           git push origin HEAD:main || {
             git pull origin main --rebase
