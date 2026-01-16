@@ -33,7 +33,7 @@ jobs:
 
       # 4. 运行抓取脚本（假设你的脚本文件名为 grab_multicast.py）
       - name: Run multicast grabber script
-        run: python grab_multicast.py
+        run: python py/grab_multicast.py
         env:
           PYTHONUNBUFFERED: "1"          # 示例：强制 Python 输出不缓冲
           # 不要写空的 KEY: ''
