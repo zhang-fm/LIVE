@@ -1,8 +1,8 @@
 import os
 import re
 
-INPUT_DIR = "test_multicast"                  # 你的组播小文件目录
-OUTPUT_FILE = "test_multicast/all_multicast.m3u"  # 输出大文件路径
+INPUT_DIR = "zubo"                  # 你的组播小文件目录
+OUTPUT_FILE = "zubo/zubo.m3u"  # 输出大文件路径
 LOGO_BASE_URL = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon"
 
 def clean_group_title(line):
