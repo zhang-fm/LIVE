@@ -32,10 +32,21 @@ jobs:
       - name: Run python py/merge_m3u.py
         run: python py/merge_m3u.py
 
-      - name: Commit and Push
+      - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add test/*.m3u
-          git commit -m "Auto update IPTV: $(date +'%Y-%m-%d %H:%M')" || echo "No changes"
-          git push origin HEAD:main
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add .
+          
+          # 检查是否有内容需要提交
+          if git diff --cached --quiet; then
+            echo "没有发现变更，跳过提交。"
+          else
+            git commit -m "Auto update IPTV: $(date +'%Y-%m-%d %H:%M')"
+            
+            # --- 关键修改：添加拉取并变基 ---
+            git pull --rebase origin main
+            
+            git push origin HEAD:main
+          fi
