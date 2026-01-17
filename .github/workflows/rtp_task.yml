@@ -1,0 +1,38 @@
+name: Daily RTP Extract Task
+
+on:
+  schedule:
+    # 每天北京时间 08:00, 14:00, 20:00 运行 (UTC 0, 6, 12)
+    - cron: '0 0,6,12 * * *'
+  workflow_dispatch: # 支持手动点击运行
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run RTP Extract Script
+        run: python py/fofa/auto_rtp_process.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add py/fofa/rtp/*.txt
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+          else
+            git commit -m "Auto update RTP files: $(date +'%Y-%m-%d %H:%M')"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
