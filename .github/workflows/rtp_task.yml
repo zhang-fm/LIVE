@@ -24,6 +24,9 @@ jobs:
       - name: Run RTP Extract Script
         run: python py/extract_rtp.py
 
+      - name: Run RTP Extract Script
+        run: python py/hotel_rules.py
+
       - name: Commit and Push
         run: |
           git config --local user.name "github-actions[bot]"
