@@ -22,13 +22,13 @@ jobs:
           python-version: '3.10'
 
       - name: Run RTP Extract Script
-        run: python py/fofa/auto_rtp_process.py
+        run: python py/auto_rtp_process.py
 
       - name: Commit and Push
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add py/fofa/rtp/*.txt
+          git add py/rtp/*.txt
           if git diff --cached --quiet; then
             echo "No changes detected."
           else
