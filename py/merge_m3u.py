@@ -3,7 +3,7 @@ import re
 
 INPUT_DIR = "hotel"
 OUTPUT_FILE = "hotel/hotel_all.m3u"
-LOGO_BASE_URL = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon"
+LOGO_BASE_URL = "https://gcore.jsdelivr.net/gh/kenye201/TVlog/img"
 
 def clean_group_title(line):
     """提取 [地名][运营商]，例如: 广西联通"""
