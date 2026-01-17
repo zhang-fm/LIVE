@@ -22,7 +22,7 @@ jobs:
           python-version: '3.10'
 
       - name: Run RTP Extract Script
-        run: python py/auto_rtp_process.py
+        run: python py/extract_rtp.py
 
       - name: Commit and Push
         run: |
