@@ -1,7 +1,7 @@
 import os
 import re
 
-# ================= 配置区 =================
+# ================= 配置区 ================
 SOURCE_DIR = "hotel"      # 酒店原始 M3U 存放目录
 TARGET_DIR = "py/hotel"     # 规律总结存放目录
 MAPPING_LOG = "py/hotel/酒店提取日志.txt"
