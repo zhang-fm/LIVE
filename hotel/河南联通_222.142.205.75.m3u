@@ -1,0 +1,241 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-1
+http://222.142.205.75:9901/tsfile/live/1037_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-2财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-2财经
+http://222.142.205.75:9901/tsfile/live/1038_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-3音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-3音乐
+http://222.142.205.75:9901/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-4中文国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-4中文国际
+http://222.142.205.75:9901/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-5
+http://222.142.205.75:9901/tsfile/live/1012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-6
+http://222.142.205.75:9901/tsfile/live/1042_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-国防军事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV7-国防军事
+http://222.142.205.75:9901/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-8" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-8
+http://222.142.205.75:9901/tsfile/live/1044_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-9
+http://222.142.205.75:9901/tsfile/live/1045_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-10科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-10科教
+http://222.142.205.75:9901/tsfile/live/1046_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-11戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-11戏曲
+http://222.142.205.75:9901/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-12社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-12社会与法
+http://222.142.205.75:9901/tsfile/live/1048_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-13新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-13新闻
+http://222.142.205.75:9901/tsfile/live/1049_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-14少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-14少儿
+http://222.142.205.75:9901/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-15音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-15音乐
+http://222.142.205.75:9901/tsfile/live/1051_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="老故事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",老故事
+http://222.142.205.75:9901/tsfile/live/1120_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV17-农业农村" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV17-农业农村
+http://222.142.205.75:9901/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="柘城综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",柘城综合
+http://222.142.205.75:9901/tsfile/live/1060_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-电影
+http://222.142.205.75:9901/tsfile/live/1068_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="商丘新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",商丘新闻
+http://222.142.205.75:9901/tsfile/live/1015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="商丘公共" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",商丘公共
+http://222.142.205.75:9901/tsfile/live/1016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="商丘文体科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",商丘文体科教
+http://222.142.205.75:9901/tsfile/live/1017_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南卫视
+http://222.142.205.75:9901/tsfile/live/1053_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南新闻频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南新闻频道
+http://222.142.205.75:9901/tsfile/live/1058_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南民生频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南民生频道
+http://222.142.205.75:9901/tsfile/live/1019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南公共频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南公共频道
+http://222.142.205.75:9901/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南都市频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南都市频道
+http://222.142.205.75:9901/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="电视剧频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",电视剧频道
+http://222.142.205.75:9901/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南梨园频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南梨园频道
+http://222.142.205.75:9901/tsfile/live/1061_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中华功夫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",中华功夫
+http://222.142.205.75:9901/tsfile/live/1065_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南法治频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南法治频道
+http://222.142.205.75:9901/tsfile/live/1066_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新农村频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",新农村频道
+http://222.142.205.75:9901/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="收藏天下" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",收藏天下
+http://222.142.205.75:9901/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="开封新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",开封新闻
+http://222.142.205.75:9901/tsfile/live/1062_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="开封文旅" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",开封文旅
+http://222.142.205.75:9901/tsfile/live/1063_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="濮阳公共" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",濮阳公共
+http://222.142.205.75:9901/tsfile/live/1073_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="濮阳综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",濮阳综合
+http://222.142.205.75:9901/tsfile/live/1074_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="周口公共" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",周口公共
+http://222.142.205.75:9901/tsfile/live/1032_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="周口教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",周口教育
+http://222.142.205.75:9901/tsfile/live/1033_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="祥符频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",祥符频道
+http://222.142.205.75:9901/tsfile/live/1118_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州综合
+http://222.142.205.75:9901/tsfile/live/1021_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州商都" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州商都
+http://222.142.205.75:9901/tsfile/live/1091_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州文体" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州文体
+http://222.142.205.75:9901/tsfile/live/1097_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州影视戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州影视戏曲
+http://222.142.205.75:9901/tsfile/live/1099_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州少儿儿童" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州少儿儿童
+http://222.142.205.75:9901/tsfile/live/1100_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="郑州都市生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",郑州都市生活
+http://222.142.205.75:9901/tsfile/live/1101_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",东方卫视
+http://222.142.205.75:9901/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",北京卫视
+http://222.142.205.75:9901/tsfile/live/1075_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",天津卫视
+http://222.142.205.75:9901/tsfile/live/1080_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",深圳卫视
+http://222.142.205.75:9901/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",安徽卫视
+http://222.142.205.75:9901/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",湖北卫视
+http://222.142.205.75:9901/tsfile/live/1013_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",东南卫视
+http://222.142.205.75:9901/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",甘肃卫视
+http://222.142.205.75:9901/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",湖南卫视
+http://222.142.205.75:9901/tsfile/live/1076_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",江苏卫视
+http://222.142.205.75:9901/tsfile/live/1077_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",辽宁卫视
+http://222.142.205.75:9901/tsfile/live/1055_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="旅游卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",旅游卫视
+http://222.142.205.75:9901/tsfile/live/1056_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",宁夏卫视
+http://222.142.205.75:9901/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",青海卫视
+http://222.142.205.75:9901/tsfile/live/1011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",山东卫视
+http://222.142.205.75:9901/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",黑龙江卫视
+http://222.142.205.75:9901/tsfile/live/1085_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",陕西卫视
+http://222.142.205.75:9901/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",广东卫视
+http://222.142.205.75:9901/tsfile/live/1089_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",广西卫视
+http://222.142.205.75:9901/tsfile/live/1090_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",贵州卫视
+http://222.142.205.75:9901/tsfile/live/1010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",云南卫视
+http://222.142.205.75:9901/tsfile/live/1092_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河北卫视
+http://222.142.205.75:9901/tsfile/live/1093_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",吉林卫视
+http://222.142.205.75:9901/tsfile/live/1094_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",江西卫视
+http://222.142.205.75:9901/tsfile/live/1095_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",山西卫视
+http://222.142.205.75:9901/tsfile/live/1096_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",浙江卫视
+http://222.142.205.75:9901/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",四川卫视
+http://222.142.205.75:9901/tsfile/live/1098_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="兵团卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",兵团卫视
+http://222.142.205.75:9901/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="厦门卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",厦门卫视
+http://222.142.205.75:9901/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="三沙卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",三沙卫视
+http://222.142.205.75:9901/tsfile/live/1031_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",金鹰纪实
+http://222.142.205.75:9901/tsfile/live/1035_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="内蒙卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",内蒙卫视
+http://222.142.205.75:9901/tsfile/live/1103_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",西藏卫视
+http://222.142.205.75:9901/tsfile/live/1104_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",新疆卫视
+http://222.142.205.75:9901/tsfile/live/1105_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",金鹰卡通
+http://222.142.205.75:9901/tsfile/live/1106_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",嘉佳卡通
+http://222.142.205.75:9901/tsfile/live/1107_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="哈哈炫动" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",哈哈炫动
+http://222.142.205.75:9901/tsfile/live/1081_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="优漫卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",优漫卡通
+http://222.142.205.75:9901/tsfile/live/1111_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="卡酷动漫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",卡酷动漫
+http://222.142.205.75:9901/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中国教育-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",中国教育-1
+http://222.142.205.75:9901/tsfile/live/1108_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中国教育-2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",中国教育-2
+http://222.142.205.75:9901/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",山东教育
+http://222.142.205.75:9901/tsfile/live/1057_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",重庆卫视
+http://222.142.205.75:9901/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="大美河南" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",大美河南
+http://222.142.205.75:9901/tsfile/live/1067_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="棋牌汇" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",棋牌汇
+http://222.142.205.75:9901/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="移动戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",移动戏曲
+http://222.142.205.75:9901/tsfile/live/1070_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="精彩中原" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",精彩中原
+http://222.142.205.75:9901/tsfile/live/1072_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="百姓调解" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",百姓调解
+http://222.142.205.75:9901/tsfile/live/1110_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="健康中原" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",健康中原
+http://222.142.205.75:9901/tsfile/live/1052_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="欢腾购物" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",欢腾购物
+http://222.142.205.75:9901/tsfile/live/1059_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="家有购物" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",家有购物
+http://222.142.205.75:9901/tsfile/live/1069_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-5高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CCTV-5高清
+http://222.142.205.75:9901/tsfile/live/1036_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="凤凰卫视中文台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",凤凰卫视中文台
+http://222.142.205.75:9901/tsfile/live/1082_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="凤凰卫视资讯台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",凤凰卫视资讯台
+http://222.142.205.75:9901/tsfile/live/1086_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="国学频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",国学频道
+http://222.142.205.75:9901/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="北湖景观" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",北湖景观
+http://222.142.205.75:9901/tsfile/live/1078_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="千树园景观" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",千树园景观
+http://222.142.205.75:9901/tsfile/live/1071_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",河南卫视4K
+http://222.142.205.75:9901/tsfile/live/1018_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CHC动作电影
+http://222.142.205.75:9901/tsfile/live/1064_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",CHC家庭影院
+http://222.142.205.75:9901/tsfile/live/1079_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新动漫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",新动漫
+http://222.142.205.75:9901/tsfile/live/1084_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="先锋乒羽" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",先锋乒羽
+http://222.142.205.75:9901/tsfile/live/1087_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="生活时尚" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",生活时尚
+http://222.142.205.75:9901/tsfile/live/1123_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="优优宝贝" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",优优宝贝
+http://222.142.205.75:9901/tsfile/live/1109_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="书法书画" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",书法书画
+http://222.142.205.75:9901/tsfile/live/1112_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="环球旅游" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",环球旅游
+http://222.142.205.75:9901/tsfile/live/1115_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天天乐游" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",天天乐游
+http://222.142.205.75:9901/tsfile/live/1116_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="都市剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",都市剧场
+http://222.142.205.75:9901/tsfile/live/1117_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="欢笑剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",欢笑剧场
+http://222.142.205.75:9901/tsfile/live/1119_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新视角" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",新视角
+http://222.142.205.75:9901/tsfile/live/1122_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="茶频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",茶频道
+http://222.142.205.75:9901/tsfile/live/1124_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="金色学堂" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",金色学堂
+http://222.142.205.75:9901/tsfile/live/1114_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中学生课堂" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",中学生课堂
+http://222.142.205.75:9901/tsfile/live/1113_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="快乐垂钓" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省商丘市柘城县酒店 河南联通",快乐垂钓
+http://222.142.205.75:9901/tsfile/live/1102_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
