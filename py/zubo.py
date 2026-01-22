@@ -12,14 +12,14 @@ from datetime import datetime
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "zubo"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "history.txt")
-MAX_IP_COUNT = 6  # 组播源通常取首页后 6 个
+MAX_IP_COUNT = 6  # 组播源取首页后 6 个
 TIMEOUT = 12
 
-# 常用组播端口
+# 组播常用端口池
 PRIMARY_MULTICAST_PORTS = [
     6636, 16888, 5002, 8055, 8288, 8880, 5555, 55555, 7000, 6003, 9999, 8012, 10000, 8888, 4022, 8188, 8022, 7777, 5146, 5140, 4056, 12320, 
     10000, 8080, 8000, 9901, 8090, 8181, 1234, 4000, 4001, 5148, 12345, 8805, 8187, 9926, 8222, 8808, 8883, 8686, 8188, 4023, 8848, 6666, 
-    9000, 9001, 888, 9003, 8082, 20443, 85, 8081, 8001, 8899, 808
+    9000, 9001, 888, 9003, 8082, 20443, 85, 8081, 8001, 8899
 ]
 
 UA_LIST = [
@@ -28,10 +28,10 @@ UA_LIST = [
 ]
 
 def manage_history():
-    """周一准时清理 history.txt"""
+    """周一清理逻辑"""
     if datetime.now().weekday() == 0:
         if os.path.exists(HISTORY_FILE):
-            print("📅 周一检测：正在清理旧的组播 IP 记录表...")
+            print("📅 今天是周一，执行每周例行清理：删除组播历史 IP 表。")
             os.remove(HISTORY_FILE)
     
     history_ips = set()
@@ -72,56 +72,57 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_history()
     
-    print(f"🚀 启动组播源抓取任务 (目标数量: 后 {MAX_IP_COUNT} 个 IP)")
+    print(f"🚀 启动组播源抓取任务 (目标数量: {MAX_IP_COUNT})")
     
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
         ips = list(dict.fromkeys(re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)))
-        # 组播源通常取首页最后 MAX_IP_COUNT 个
         target_ips = [ip for ip in ips if not ip.startswith("127")][-MAX_IP_COUNT:]
         print(f"📍 首页获取到目标 IP 列表: {target_ips}")
     except Exception as e:
         print(f"❌ 首页访问失败: {e}"); return
 
-    # 第一遍：显示所有 IP 状态
     print("\n--- IP 状态检查 ---")
-    new_ips = []
+    new_ips_to_scan = []
     for ip in target_ips:
         if ip in history_ips:
-            print(f" ⏩ IP {ip} -> [历史记录已存在，跳过]")
+            print(f" ⏩ IP {ip} -> [已存在于历史表，跳过探测]")
         else:
-            print(f" 🎯 IP {ip} -> [发现新 IP，准备扫描]")
-            new_ips.append(ip)
+            print(f" 🎯 IP {ip} -> [新发现，准备探测]")
+            new_ips_to_scan.append(ip)
 
-    if not new_ips:
-        print("\n✅ 所有 IP 均已记录，无需执行新抓取。")
+    if not new_ips_to_scan:
+        print("\n✅ 所有组播 IP 均已处理过，本次无须探测。")
         return
 
-    # 第二遍：抓取新 IP
-    print(f"\n--- 开始探测 {len(new_ips)} 个新 IP ---")
-    fofa_blocked = False
-    for idx, ip in enumerate(new_ips, 1):
-        print(f"\n[{idx}/{len(new_ips)}] 📡 探测中: {ip}")
+    print(f"\n--- 开始探测 {len(new_ips_to_scan)} 个新组播 IP ---")
+    for idx, ip in enumerate(new_ips_to_scan, 1):
+        print(f"\n[{idx}/{len(new_ips_to_scan)}] 📡 正在处理: {ip}")
         f_ports = get_fofa_ports(ip)
         test_ports = f_ports + [p for p in PRIMARY_MULTICAST_PORTS if p not in f_ports] if f_ports is not None else PRIMARY_MULTICAST_PORTS
         
-        success_count = 0
+        found_success = False
         for port in test_ports:
             print(f"    ➜ 尝试端口 {port} ... ", end="", flush=True)
             content = scan_ip_port(ip, port)
+            
             if content:
-                filename = f"multicast_{ip}_{port}.m3u"
+                filename = f"zubo_{ip}_{port}.m3u"
                 with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
                     f.write(content)
                 save_history(ip, port)
                 print(f"✅ 成功! 保存为: {filename}")
-                success_count += 1
-                if success_count >= 2: # 单个 IP 抓双端口
-                    print(f"    💡 已获取 2 个端口源，切换下个 IP。")
-                    break
+                found_success = True
+                break  # <--- 抓到一个通的就停，不再测试后续端口
             else:
                 print("✕")
+        
+        if not found_success:
+            print(f"    ⚠️ IP {ip} 未能探测到有效端口")
+        
         time.sleep(random.uniform(5, 10))
+
+    print("\n组播任务完成！")
 
 if __name__ == "__main__":
     main()
