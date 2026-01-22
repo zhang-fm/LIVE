@@ -7,14 +7,15 @@ import random
 from datetime import datetime
 
 # ======================
-# 配置区
+# 深度配置区
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 6  
+MAX_IP_COUNT = 6  # 酒店源通常取首页前 6 个
 TIMEOUT = 12 
 
+# 常用高频端口
 PRIMARY_PORTS = [8082, 9901, 888, 9001, 9003, 9888, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808, 20443]
 
 UA_LIST = [
@@ -23,9 +24,10 @@ UA_LIST = [
 ]
 
 def manage_hotel_history():
-    if datetime.now().weekday() == 0: # 周一
+    """周一简单粗暴删表，其他时间读取 IP"""
+    if datetime.now().weekday() == 0: # 0代表周一
         if os.path.exists(HISTORY_FILE):
-            print("📅 今天周一，清理旧的酒店 IP 记录表。")
+            print("📅 今天是周一，执行每周例行清理：删除酒店历史 IP 表。")
             os.remove(HISTORY_FILE)
     
     history_ips = set()
@@ -72,31 +74,35 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_hotel_history()
     
-    print(f"🚀 启动酒店源抓取任务 (目标: 前 {MAX_IP_COUNT} 个 IP)")
+    print(f"🚀 启动酒店源抓取任务 (目标数量: {MAX_IP_COUNT})")
     
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
         ips = list(dict.fromkeys(re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)))
         target_ips = [ip for ip in ips if not ip.startswith("127")][:MAX_IP_COUNT]
-        print(f"📍 首页获取到目标 IP: {target_ips}")
+        print(f"📍 首页获取到目标 IP 列表: {target_ips}")
     except Exception as e:
-        print(f"❌ 首页失败: {e}"); return
+        print(f"❌ 首页访问失败: {e}"); return
 
-    # 打印所有 IP 的状态
+    # 第一遍遍历：打印所有 IP 的当前状态
+    print("\n--- IP 状态检查 ---")
+    new_ips_to_scan = []
     for ip in target_ips:
         if ip in history_ips:
-            print(f" ⏩ IP {ip} 已在历史记录中，跳过探测。")
-    
-    new_ips = [ip for ip in target_ips if ip not in history_ips]
-    
-    if not new_ips:
-        print("\n✅ 所有目标 IP 均已抓取过，本次无新任务。")
+            print(f" ⏩ IP {ip} -> [已存在于历史表，跳过]")
+        else:
+            print(f" 🎯 IP {ip} -> [新发现，准备探测]")
+            new_ips_to_scan.append(ip)
+
+    if not new_ips_to_scan:
+        print("\n✅ 所有目标 IP 均已处理过，本次无须探测新 IP。")
         return
 
-    print(f"\n🎯 准备探测新酒店 IP: {new_ips}")
+    # 第二遍遍历：开始真正抓取新 IP
+    print(f"\n--- 开始探测 {len(new_ips_to_scan)} 个新 IP ---")
     fofa_blocked = False
-    for idx, ip in enumerate(new_ips, 1):
-        print(f"\n[{idx}/{len(new_ips)}] 📡 探测: {ip}")
+    for idx, ip in enumerate(new_ips_to_scan, 1):
+        print(f"\n[{idx}/{len(new_ips_to_scan)}] 📡 正在探测: {ip}")
         f_ports = get_fofa_ports(ip)
         test_ports = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports] if f_ports is not None else PRIMARY_PORTS
         
@@ -113,10 +119,14 @@ def main():
                 save_history(ip, port)
                 print(f"✅ 成功! 保存为: {filename}")
                 success_count += 1
-                if success_count >= 2: break 
+                if success_count >= 2: # 单个 IP 抓到 2 个不同端口就停
+                    print(f"    💡 已抓取到 2 个有效端口，切换下一个 IP。")
+                    break 
             else:
                 print("✕")
         time.sleep(random.uniform(5, 10))
+
+    print("\n任务完成！所有新文件已保存在 hotel 目录。")
 
 if __name__ == "__main__":
     main()
