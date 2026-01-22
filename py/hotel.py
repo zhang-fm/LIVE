@@ -12,10 +12,9 @@ from datetime import datetime
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 6  # 酒店源通常取首页前 6 个
+MAX_IP_COUNT = 6  
 TIMEOUT = 12 
 
-# 常用高频端口
 PRIMARY_PORTS = [8082, 9901, 888, 9001, 9003, 9888, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808, 20443]
 
 UA_LIST = [
@@ -24,8 +23,7 @@ UA_LIST = [
 ]
 
 def manage_hotel_history():
-    """周一简单粗暴删表，其他时间读取 IP"""
-    if datetime.now().weekday() == 0: # 0代表周一
+    if datetime.now().weekday() == 0: 
         if os.path.exists(HISTORY_FILE):
             print("📅 今天是周一，执行每周例行清理：删除酒店历史 IP 表。")
             os.remove(HISTORY_FILE)
@@ -84,7 +82,6 @@ def main():
     except Exception as e:
         print(f"❌ 首页访问失败: {e}"); return
 
-    # 第一遍遍历：打印所有 IP 的当前状态
     print("\n--- IP 状态检查 ---")
     new_ips_to_scan = []
     for ip in target_ips:
@@ -98,7 +95,6 @@ def main():
         print("\n✅ 所有目标 IP 均已处理过，本次无须探测新 IP。")
         return
 
-    # 第二遍遍历：开始真正抓取新 IP
     print(f"\n--- 开始探测 {len(new_ips_to_scan)} 个新 IP ---")
     fofa_blocked = False
     for idx, ip in enumerate(new_ips_to_scan, 1):
@@ -106,22 +102,32 @@ def main():
         f_ports = get_fofa_ports(ip)
         test_ports = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports] if f_ports is not None else PRIMARY_PORTS
         
-        success_count = 0
+        found_success = False
         for port in test_ports:
             print(f"    ➜ 尝试端口 {port} ... ", end="", flush=True)
             content = scan_ip_port(ip, port)
+            
             if content:
-                # ... 前面的保存逻辑保持不变 ...
+                group_match = re.search(r'group-title="(.*?)"', content)
+                group_name = clean_name(group_match.group(1)) if group_match else "未知分类"
+                filename = f"{group_name}_{ip}_{port}.m3u"
+                
+                with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
+                    f.write(content)
+                
                 save_history(ip, port)
                 print(f"✅ 成功! 保存为: {filename}")
-                
-                found_success = True # 标记该 IP 已成功
-                break  # <--- 关键：抓到一个就立刻跳出当前端口循环，去弄下一个 IP
+                found_success = True
+                break # <--- 改进：抓到一个成功端口，立刻停止当前 IP 的后续探测
             else:
                 print("✕")
+        
+        if not found_success:
+            print(f"    ⚠️ IP {ip} 尝试了所有端口均未发现有效源")
+            
         time.sleep(random.uniform(5, 10))
 
-    print("\n任务完成！所有新文件已保存在 hotel 目录。")
+    print("\n任务完成！")
 
 if __name__ == "__main__":
     main()
