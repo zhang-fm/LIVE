@@ -29,7 +29,7 @@ jobs:
 
       - name: 执行失效文件清理
         # 联动清理脚本，确保仓库里不留下失效的 m3u
-        run: python py/cleanup_m3u.py
+        run: python py/merge_m3u.py
 
       - name: 同步记录到仓库
         run: |
