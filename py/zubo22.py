@@ -1,49 +1,74 @@
-import requests
 import re
 import os
+import concurrent.futures
+import requests
 
-# 配置
-# 注意：这里使用 raw.githubusercontent.com 才能获取纯文本内容
-RAW_URL = "https://raw.githubusercontent.com/kenye201/LIVE/main/py/iptv_shushu.html"
-SAVE_PATH = "/volume1/docker/iptv_backup/my_channels.txt" # 提取后的存放路径
+# 1. 配置
+FILE_PATH = "py/iptv_shushu.html"
+# 常用端口字典
+PORT_DICT = ["80", "8080", "8000", "81", "8888", "9000"]
 
-def extract_ips_from_github():
+def check_url(ip, port):
+    """按照 cqshushu 的特定格式拼接并试错"""
+    # 构造目标 URL
+    test_url = f"https://iptv.cqshushu.com/?s={ip}:{port}&t=multicast&channels=1&download=m3u"
+    
     try:
-        print(f"正在从 GitHub 获取源码: {RAW_URL}")
-        response = requests.get(RAW_URL, timeout=30)
-        response.encoding = 'utf-8'
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        # 试错下载：由于是下载 m3u，我们检查内容是否包含扩展名特征
+        with requests.get(test_url, headers=headers, timeout=5, stream=True) as r:
+            if r.status_code == 200:
+                # 进一步校验：检查返回的前 100 字节是否包含 #EXTM3U
+                content_chunk = r.raw.read(100).decode('utf-8', errors='ignore')
+                if "#EXTM3U" in content_chunk:
+                    return f"{ip}:{port},{test_url}"
+    except:
+        pass
+    return None
+
+def main():
+    if not os.path.exists(FILE_PATH):
+        print(f"找不到文件: {FILE_PATH}")
+        return
+
+    with open(FILE_PATH, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # 2. 提取 IP 地址 (匹配常见的 IPv4)
+    # 匹配模式：寻找类似 123.123.123.123 的字符串
+    ip_list = re.findall(r'(?:\d{1,3}\.){3}\d{1,3}', content)
+    # 去重
+    unique_ips = list(set(ip_list))
+    
+    print(f"共提取到 {len(unique_ips)} 个唯一 IP。")
+    print(f"使用端口字典: {PORT_DICT}，总计测试次数: {len(unique_ips) * len(PORT_DICT)}")
+
+    # 3. 构造任务池
+    tasks = []
+    for ip in unique_ips:
+        for port in PORT_DICT:
+            tasks.append((ip, port))
+
+    # 4. 并发测试
+    print("开始并发试错...")
+    valid_results = []
+    # 调高并发数，加快试错速度
+    with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+        future_to_task = {executor.submit(check_url, ip, port): (ip, port) for ip, port in tasks}
         
-        if response.status_code != 200:
-            print(f"获取失败，HTTP 状态码: {response.status_code}")
-            return
+        for future in concurrent.futures.as_completed(future_to_task):
+            result = future.result()
+            if result:
+                valid_results.append(result)
+                print(f"[成功] {result.split(',')[0]} -> 可下载")
 
-        html_content = response.text
-
-        # 使用正则提取 IP 链接和频道名
-        # 假设 HTML 中的格式通常是: 频道名,http://ip:port/xxx
-        # 下面是一个通用的正则匹配模式，根据你上传的 HTML 内容可能需要微调
-        # 匹配 pattern: 频道名 + 链接
-        pattern = r'([^,\n]+),(http[s]?://[\d\.]+:\d+/[^\s\n]+)'
-        matches = re.findall(pattern, html_content)
-
-        if not matches:
-            print("未能在 HTML 中匹配到有效的频道信息，请检查正则或 HTML 结构。")
-            # 打印前100个字符调试
-            print("HTML 预览:", html_content[:100])
-            return
-
-        # 格式化并保存
-        results = []
-        for name, url in matches:
-            results.append(f"{name.strip()},{url.strip()}")
-
-        with open(SAVE_PATH, "w", encoding="utf-8") as f:
-            f.write("\n".join(results))
-        
-        print(f"成功！已提取 {len(results)} 个频道并保存至: {SAVE_PATH}")
-
-    except Exception as e:
-        print(f"发生错误: {e}")
+    # 5. 输出最终结果
+    print("\n" + "="*30)
+    print(f"探测结束，共发现 {len(valid_results)} 个有效源：")
+    for item in valid_results:
+        print(item)
 
 if __name__ == "__main__":
-    extract_ips_from_github()
+    main()
