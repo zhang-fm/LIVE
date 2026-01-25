@@ -2,88 +2,77 @@ import requests
 import re
 import os
 import base64
-import time
-import random
 
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "zubo"
-TIMEOUT = 12
 
-def get_headers():
-    return {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Referer": HOME_URL
-    }
-
-def decode_ip(b64_str):
-    """解码网页中的 Base64 IP"""
+def decode_base64(data):
+    """尝试解码 Base64，验证是否为合法的 IP 格式"""
     try:
-        return base64.b64decode(b64_str).decode('utf-8')
+        # 补齐 Base64 填充
+        missing_padding = len(data) % 4
+        if missing_padding:
+            data += '=' * (4 - missing_padding)
+        decoded = base64.b64decode(data).decode('utf-8')
+        # 正则验证是否为 IP 格式 (x.x.x.x)
+        if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", decoded):
+            return decoded
     except:
-        return None
+        pass
+    return None
 
 def main():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
-    print(f"🚀 开始解析加密 IP...")
-    try:
-        r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
-        html_content = r.text
-        
-        # 1. 使用正则精准匹配 gotoIP 函数里的 Base64 字符串
-        # 匹配格式如: gotoIP('MTIzLjEwLjc2LjQx', '...
-        encoded_ips = re.findall(r"gotoIP\('([^']+)'", html_content)
-        
-        # 2. 解码并去重
-        all_ips = []
-        for b64 in encoded_ips:
-            ip = decode_ip(b64)
-            if ip and ip not in all_ips:
-                all_ips.append(ip)
-        
-        # 3. 按照你的需求，取最新的（通常是前 12 个，或者后 12 个）
-        # 网页结构通常是 6个酒店 + 6个组播，一共 12 个
-        target_ips = all_ips[:12] 
-        
-        print(f"📍 成功提取到 {len(target_ips)} 个有效 IP: {target_ips}")
-        
-    except Exception as e:
-        print(f"❌ 访问或解析失败: {e}")
-        return
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
 
-    # 4. 尝试常用端口并保存
-    test_ports = [
+    print("🚀 开始请求页面...")
+    try:
+        res = requests.get(HOME_URL, headers=headers, timeout=15)
+        res.encoding = 'utf-8'
+        html = res.text
+
+        # 方案 A: 匹配 gotoIP('...', '...')
+        found_ips = set()
+        matches = re.findall(r"['\"]([A-Za-z0-9+/=]{8,})['\"]", html)
+        
+        for item in matches:
+            ip = decode_base64(item)
+            if ip:
+                found_ips.add(ip)
+
+        print(f"📍 发现有效 IP: {list(found_ips)}")
+
+        count = 0
+        ports = [
     6636, 16888, 5002, 3333, 8188, 8055, 8288, 8880, 5555, 55555, 58888, 7000, 7700, 6003, 9988, 9999, 8012, 10000, 8888, 4022, 8188, 8022, 7777, 5146, 5140, 4056, 12320, 
     10000, 8080, 8000, 9901, 8090, 8181, 1234, 4000, 4001, 5148, 12345, 8805, 8187, 9926, 8222, 8808, 8883, 8686, 8188, 4023, 8848, 6666, 
     9000, 9001, 888, 9003, 8082, 20443, 85, 8081, 8001, 8003, 6001, 8899
 ]
-    
-    for ip in target_ips:
-        success = False
-        for port in test_ports:
-            # 这里的下载链接逻辑保持你之前的版本
-            test_url = f"https://iptv.cqshushu.com/?s={ip}:{port}&t=multicast&channels=1&download=m3u"
-            try:
-                time.sleep(random.uniform(1, 3)) # 礼貌抓取
-                res = requests.get(test_url, headers=get_headers(), timeout=TIMEOUT)
-                if "#EXTINF" in res.text:
-                    # 提取省份/运营商作为文件名
-                    # 匹配示例: 河南省漯河市... 河南联通
-                    name_match = re.search(r'data-label="类型:">([^<]+)</td>', html_content)
-                    provider = "源"
-                    if name_match:
-                        info = name_match.group(1)
-                        provider = info.split()[-1] if " " in info else "IPTV"
+        
+        for ip in found_ips:
+            for port in ports:
+                # 构造下载 m3u 的接口地址
+                # 注意：如果网站接口变了，这里可能需要根据 F12 网络面板重新调整
+                download_url = f"{HOME_URL}download.php?s={ip}:{port}&t=mcast" 
+                
+                try:
+                    m3u_res = requests.get(download_url, headers=headers, timeout=5)
+                    if "#EXTINF" in m3u_res.text:
+                        with open(f"{OUTPUT_DIR}/{ip}_{port}.m3u", "w", encoding="utf-8") as f:
+                            f.write(m3u_res.text)
+                        count += 1
+                        break
+                except:
+                    continue
+        
+        print(f"✅ 完成！共保存 {count} 个文件。")
 
-                    filename = f"{provider}-{ip.replace('.', '_')}.m3u"
-                    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-                        f.write(res.text)
-                    print(f" ✅ 成功: {filename}")
-                    success = True
-                    break
-            except:
-                continue
+    except Exception as e:
+        print(f"❌ 运行异常: {e}")
 
 if __name__ == "__main__":
     main()
