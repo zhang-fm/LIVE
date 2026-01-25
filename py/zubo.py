@@ -12,7 +12,7 @@ from datetime import datetime
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "zubo"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "history.txt")
-MAX_IP_COUNT = 6
+MAX_IP_COUNT = 6 # 适当增加扫描范围
 TIMEOUT = 12
 
 PRIMARY_MULTICAST_PORTS = [
@@ -27,31 +27,35 @@ UA_LIST = [
 ]
 
 def extract_provider_from_m3u(m3u_text):
-    """从 M3U 内容中提取 group-title 中的地区运营商信息"""
+    """从 M3U 的 group-title 中提取地区运营商"""
     try:
-        # 寻找 group-title="内容"
+        # 正则匹配 group-title="上海市上海市组播 上海电信"
         match = re.search(r'group-title="([^"]+)"', m3u_text)
         if match:
-            group_info = match.group(1)
-            # 这里的 group_info 可能是 "上海市上海市组播 上海电信"
-            # 我们简单清洗一下，去掉“组播”字样，保留核心部分
-            clean_info = group_info.replace("组播", "").strip()
-            # 如果中间有空格，取最后一部分（通常是 地区+运营商）
-            return clean_info.split()[-1] if " " in clean_info else clean_info
+            full_title = match.group(1)
+            # 过滤掉“组播”、“上海市”等重复字样，只取空格后的核心内容
+            # 或者直接取最后 4 个字（如：上海电信）
+            parts = full_title.split()
+            provider = parts[-1] if len(parts) > 1 else full_title
+            return provider.replace("组播", "").strip()
     except:
         pass
     return "未知运营商"
 
 def manage_history():
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+    # 周一清理历史
     if datetime.now().weekday() == 0:
         if os.path.exists(HISTORY_FILE):
             os.remove(HISTORY_FILE)
+    
     history_ips = set()
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
             for line in f:
-                if ":" in line:
-                    history_ips.add(line.split(':')[0].strip())
+                ip_part = line.split(':')[0].strip()
+                if ip_part: history_ips.add(ip_part)
     return history_ips
 
 def save_history(ip, port):
@@ -62,18 +66,17 @@ def get_headers():
     return {"User-Agent": random.choice(UA_LIST), "Referer": "https://fofa.info/"}
 
 def get_fofa_ports(ip):
-    time.sleep(random.uniform(5, 10))
+    time.sleep(random.uniform(3, 6))
     try:
         query = base64.b64encode(ip.encode()).decode()
         res = requests.get(f"https://fofa.info/result?qbase64={query}", headers=get_headers(), timeout=15)
-        ports = set(re.findall(rf'{ip}:(\d+)', res.text) + re.findall(r'port-item.*?(\d+)</a>', res.text, re.S))
-        return sorted([int(p) for p in ports if int(p) not in {22, 23, 443, 80, 53, 3306, 3389}])
+        ports = set(re.findall(rf'{ip}:(\d+)', res.text))
+        return sorted([int(p) for p in ports if int(p) > 100])
     except: return []
 
 def scan_ip_port(ip, port):
     url = f"https://iptv.cqshushu.com/?s={ip}:{port}&t=multicast&channels=1&download=m3u"
     try:
-        time.sleep(random.uniform(2, 4))
         res = requests.get(url, headers=get_headers(), timeout=TIMEOUT)
         if res.status_code == 200 and "#EXTINF" in res.text:
             return res.text
@@ -81,43 +84,59 @@ def scan_ip_port(ip, port):
     return None
 
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_history()
-    
-    print(f"🚀 启动组播源提取任务")
+    print(f"🚀 启动组播源提取任务...")
     
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
-        ips = list(dict.fromkeys(re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)))
-        target_ips = [ip for ip in ips if not ip.startswith("127")][-MAX_IP_COUNT:]
-    except: return
+        # 提取所有 IP
+        all_found_ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)
+        # 去重并过滤掉本地 IP
+        ips = []
+        for ip in all_found_ips:
+            if not ip.startswith(("127.", "0.", "192.168.")) and ip not in ips:
+                ips.append(ip)
+        
+        # 取最新的前 N 个
+        target_ips = ips[:MAX_IP_COUNT]
+        print(f"📍 首页获取到 {len(target_ips)} 个有效 IP 目标")
+    except Exception as e:
+        print(f"❌ 首页访问失败: {e}")
+        return
 
-    new_ips_to_scan = [ip for ip in target_ips if ip not in history_ips]
+    for idx, ip in enumerate(target_ips, 1):
+        if ip in history_ips:
+            print(f"[{idx}] 跳过已处理 IP: {ip}")
+            continue
 
-    for idx, ip in enumerate(new_ips_to_scan, 1):
-        print(f"\n[{idx}/{len(new_ips_to_scan)}] 📡 探测 IP: {ip}")
+        print(f"\n[{idx}] 📡 正在探测: {ip}")
         f_ports = get_fofa_ports(ip)
         test_ports = f_ports + [p for p in PRIMARY_MULTICAST_PORTS if p not in f_ports]
         
+        found_ok = False
         for port in test_ports:
-            print(f"    ➜ 尝试端口 {port} ... ", end="", flush=True)
-            m3u_content = scan_ip_port(ip, port)
+            print(f"  ➜ 尝试 {port}...", end="", flush=True)
+            content = scan_ip_port(ip, port)
             
-            if m3u_content:
-                # --- 核心改进：直接从抓到的 M3U 里提取地区运营商 ---
-                provider = extract_provider_from_m3u(m3u_content)
+            if content:
+                # --- 核心改动：改命名规则 ---
+                provider = extract_provider_from_m3u(content)
                 safe_ip = ip.replace('.', '_')
                 filename = f"{provider}-{safe_ip}.m3u"
                 
                 with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-                    f.write(m3u_content)
+                    f.write(content)
                 save_history(ip, port)
-                print(f"✅ 成功! 文件名: {filename}")
+                print(f" ✅ 成功! 命名为: {filename}")
+                found_ok = True
                 break
             else:
-                print("✕")
+                print(" ✕", end="")
         
-        time.sleep(random.uniform(5, 8))
+        if not found_ok:
+            print(f"\n ⚠️ IP {ip} 遍历端口后未发现有效输出")
+        
+        time.sleep(random.uniform(2, 4))
 
 if __name__ == "__main__":
     main()
