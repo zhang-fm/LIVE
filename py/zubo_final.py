@@ -13,11 +13,14 @@ from datetime import datetime
 LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "zubo"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "history.txt")
-MAX_IP_COUNT = 8
+MAX_IP_COUNT = 6
 TIMEOUT = 15
 
 # 重新排序端口：根据目前组播源最常见的端口
-PRIMARY_PORTS = [4022, 8888, 8188, 8000, 9901, 8080, 85, 9999, 6636]
+PRIMARY_PORTS = [6636, 16888, 5002, 3333, 8188, 8055, 8288, 8880, 5555, 55555, 58888, 7000, 7700, 6003, 9988, 9999, 8012, 10000, 8888, 4022, 8188, 8022, 7777, 5146, 5140, 4056, 12320, 
+    10000, 8080, 8000, 9901, 8090, 8181, 1234, 4000, 4001, 5148, 12345, 8805, 8187, 9926, 8222, 8808, 8883, 8686, 8188, 4023, 8848, 6666, 
+    9000, 9001, 888, 9003, 8082, 20443, 85, 8081, 8001, 8003, 6001, 8899
+]
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
