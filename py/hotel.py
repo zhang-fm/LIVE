@@ -14,7 +14,7 @@ LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "hotel"
 # 确保黑名单路径正确
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 15   # 增加扫描深度
+MAX_IP_COUNT = 6   # 增加扫描深度
 TIMEOUT = 25        # 增加超时容忍度
 
 # 重新编排端口：根据实测，9999, 9901, 8888, 85 是目前酒店源最高频端口
