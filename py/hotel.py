@@ -13,7 +13,7 @@ from datetime import datetime
 LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 10 
+MAX_IP_COUNT = 6 
 TIMEOUT = 20        # 进一步增加超时时间
 
 # 重新排序端口：根据你的反馈，把 9999 提到第一位，其他高频紧随其后
