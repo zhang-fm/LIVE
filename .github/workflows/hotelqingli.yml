@@ -1,0 +1,46 @@
+name: 每日仓库例行维护 (清理失效源)
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 1. 清理组播源
+        run: python py/hotelqingli.py
+
+      - name: 2. 提交并推送
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 记录所有文件的删除操作
+          git add -A
+          
+          if git diff --staged --quiet; then
+            echo "✅ 检查完毕，没有发现失效源，无需变动。"
+          else
+            git commit -m "🧹 每日维护：同步删除失效的酒店源和组播源"
+            git pull origin main --rebase
+            git push origin main
+            echo "🚀 清理成功，仓库已同步。"
+          fi
