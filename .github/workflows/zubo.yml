@@ -2,12 +2,12 @@ name: IPTV 组播自动抓取与整合
 
 on:
   schedule:
-    # 每小时的第 45 分钟运行一次 (北京时间)
+    # 北京时间每小时的 45 分运行一次
     - cron: '45 * * * *'
   push:
     paths:
-      - 'data/shushu_home.html' # 只要月球宿主传了新源码，立即开工
-  workflow_dispatch:           # 支持手动点击运行
+      - 'data/shushu_home.html' # 监听到月球宿主同步源码后触发
+  workflow_dispatch:           # 允许手动触发
 
 jobs:
   zubo_task:
@@ -31,7 +31,7 @@ jobs:
 
       - name: 1. 执行组播抓取 (实时显示)
         env:
-          PYTHONUNBUFFERED: 1 # 确保 print 内容实时显示在控制台
+          PYTHONUNBUFFERED: 1
         run: python py/zubo_final.py
 
       - name: 2. 执行整合与失效清理
@@ -42,17 +42,21 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 强制拉取远程最新代码防止冲突
-          git pull --rebase origin main
-          
-          # 添加抓取结果和整合结果
+          # 先把所有变动添加到暂存区（解决 pull rebase 报错的关键）
           git add zubo/history.txt
           git add zubo/*.m3u
-          # 如果 merge_zubo 会生成汇总文件(如 index.m3u)，也一并添加
-          git add *.m3u || true 
+          git add *.m3u || true
           
+          # 检查是否有内容变更
           if [ -n "$(git status --porcelain)" ]; then
+            # 先 commit 本地变动
             git commit -m "自动更新：同步与整合清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
+            
+            # 采用拉取并变基策略，解决与月球宿主提交的冲突
+            # 使用 -X theirs 策略，如果 history.txt 冲突，以最新的为准
+            git pull --rebase -X theirs origin main
+            
+            # 推送
             git push origin main
           else
             echo "没有发现内容变更，跳过本次提交。"
