@@ -77,22 +77,30 @@ def main():
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             html = f.read()
         
-        # --- 核心改进：同时提取 IP 和 对应的端口 ---
-        # 匹配格式如：s=36.22.241.67:8188
-        matches = re.findall(r's=((\d{1,3}\.){3}\d{1,3}):(\d+)', html)
+        # 1. 宽松匹配：先抓出所有 IP
+        all_ips = list(dict.fromkeys(re.findall(r"(?:\d{1,3}\.){3}\d{1,3}", html)))
+        # 过滤掉内网 IP
+        public_ips = [ip for ip in all_ips if not ip.startswith(("127.", "192.", "10.", "172."))]
         
-        # 整理数据：{ IP: 原始端口 }
+        if not public_ips:
+            log("⚠️ 源码中未发现任何公网 IP，请检查 HTML 文件内容。")
+            return
+
+        # 2. 尝试寻找 IP 紧跟着的端口 (兼容 :4022 或 s=IP:PORT)
         found_data = {}
-        for ip, _, port in matches:
-            if not ip.startswith(("127.", "192.", "10.")):
-                found_data[ip] = int(port)
-        
+        for ip in public_ips:
+            # 搜索 IP 后面跟着的 :数字
+            port_match = re.search(rf"{re.escape(ip)}[:&s=]*(\d+)", html)
+            if port_match:
+                found_data[ip] = int(port_match.group(1))
+            else:
+                found_data[ip] = 4022 # 默认保底端口
+
+        # 3. 按照你的要求：取最后 6 个
         target_ips = list(found_data.keys())[-MAX_IP_COUNT:]
         log(f"📊 提取到 {len(target_ips)} 个目标 IP")
 
-        for ip in target_ips:
-            log(f"🌟 开始处理 IP: {ip}")
-            
+        # ... 后续循环逻辑不变 ...
             # 构建测试字典：[原始端口] + [常用端口字典]
             original_port = found_data[ip]
             test_ports = [original_port] + [p for p in PRIMARY_PORTS if p != original_port]
