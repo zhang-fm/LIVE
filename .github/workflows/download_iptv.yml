@@ -27,7 +27,7 @@ jobs:
         run: pip install requests
 
       - name: 运行扫描脚本
-        run: python zubo_final.py
+        run: python py/zubo_final.py
 
       - name: 提交扫描结果
         run: |
