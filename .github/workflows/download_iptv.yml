@@ -27,7 +27,7 @@ jobs:
 
       - name: 执行下载脚本
         run: |
-          python zubo.py  # 注意：这里改成你保存的 python 文件名
+          python py/zubo.py  # 注意：这里改成你保存的 python 文件名
 
       - name: 检查文件是否生成
         run: |
