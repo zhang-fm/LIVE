@@ -37,10 +37,11 @@ jobs:
           name: debug-files
           path: debug/
 
-      - name: 提交结果
+      - name: 提交并推送
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
+          git pull origin main --rebase  # 关键：先拉取远程更改并变基
           git add .
           git commit -m "Update source: $(date)" || exit 0
-          git push
+          git push origin main
