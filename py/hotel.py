@@ -13,42 +13,50 @@ from datetime import datetime
 LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 5    # 提取 IP 成功了，我们可以稍微多看几个
-TIMEOUT = 15        # 增加超时等待
+MAX_IP_COUNT = 10 
+TIMEOUT = 20        # 进一步增加超时时间
 
-# 酒店高频端口字典
-PRIMARY_PORTS = [8082, 9901, 888, 9001, 9003, 9888, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808, 50001, 20443]
+# 重新排序端口：根据你的反馈，把 9999 提到第一位，其他高频紧随其后
+PRIMARY_PORTS = [9999, 8000, 8080, 9901, 8082, 8888, 9001, 8001, 8090, 888, 9003, 8081, 50001]
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
     sys.stdout.flush()
 
 def scan_ip_port(ip, port):
-    """单次端口扫描"""
+    """
+    精准匹配你测试成功的格式：
+    http://iptv.cqshushu.com/?s=175.11.74.249:9999&t=hotel&channels=1&format=m3u
+    """
+    # 使用 f-string 严格构造 URL，不让 requests 自动编码冒号
     url = f"https://iptv.cqshushu.com/index.php?s={ip}:{port}&t=hotel&channels=1&download=m3u"
     
-    # 显示当前正在尝试的端口
-    sys.stdout.write(f"  --> 测试端口 [{port}] ... ")
+    sys.stdout.write(f"  --> 测试 [{port}] ... ")
     sys.stdout.flush()
 
     try:
-        # 加长随机等待，让对方服务器喘口气 (1.5s - 3.5s)
-        time.sleep(random.uniform(1.5, 3.5))
+        # 端口间稍微停顿，模拟人工点击
+        time.sleep(random.uniform(2.0, 4.0))
         
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Referer": "https://iptv.cqshushu.com/"
+            "Referer": "https://iptv.cqshushu.com/",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Connection": "keep-alive"
         }
         
-        res = requests.get(url, headers=headers, timeout=TIMEOUT)
+        # 显式禁止重定向，看看是不是被防火墙拦截了
+        res = requests.get(url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
         
         if res.status_code == 200 and "#EXTINF" in res.text:
-            sys.stdout.write("【✅ 发现数据！】\n")
+            sys.stdout.write("【✅ 匹配成功！】\n")
             return res.text
+        elif "请稍候" in res.text or res.status_code == 503:
+            sys.stdout.write("⚠️ 遇盾/限频 ")
         else:
-            sys.stdout.write("✕\n")
-    except Exception:
-        sys.stdout.write("⏰ 超时\n")
+            sys.stdout.write("✕ ")
+    except Exception as e:
+        sys.stdout.write("⏰ 超时 ")
     
     sys.stdout.flush()
     return None
@@ -57,13 +65,13 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     if not os.path.exists(LOCAL_SOURCE):
-        log("❌ 找不到源码文件"); return
+        log("❌ 源码文件缺失"); return
 
     try:
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # 1. 提取加密 IP
+        # 提取 Base64 IP
         b64_list = re.findall(r"gotoIP\('([^']+)',\s*'hotel'\)", content)
         found_ips = []
         for b in b64_list:
@@ -75,42 +83,36 @@ def main():
             except: continue
 
         if not found_ips:
-            log("❌ 未在页面发现有效 IP 串"); return
+            log("❌ 未发现有效 IP"); return
 
-        log(f"✅ 成功提取 {len(found_ips)} 个 IP，准备开始探测...")
+        log(f"✅ 提取 {len(found_ips)} 个 IP，首选端口: {PRIMARY_PORTS[0]}")
 
-        # 2. 顺序探测
+        # 探测前 10 个
         target_ips = found_ips[:MAX_IP_COUNT]
         for idx, ip in enumerate(target_ips, 1):
-            log(f"📡 [{idx}/{len(target_ips)}] 正在深度扫描 IP: {ip}")
-            success = False
+            log(f"📡 [{idx}/{len(target_ips)}] 深度扫描: {ip}")
             
-            # 尝试每一个端口
             for port in PRIMARY_PORTS:
-                m3u_content = scan_ip_port(ip, port)
+                m3u_data = scan_ip_port(ip, port)
                 
-                if m3u_content:
-                    # 提取省份/运营商信息作为文件名
-                    m = re.search(r'group-title="([^"]+)"', m3u_content)
-                    title = m.group(1).split()[-1] if m else "Hotel"
-                    title = re.sub(r'[\\/:*?"<>|]', '', title) # 清洗文件名
+                if m3u_data:
+                    # 自动获取运营商名称
+                    m = re.search(r'group-title="([^"]+)"', m3u_data)
+                    tag = m.group(1).split()[-1] if m else "Hotel"
+                    tag = re.sub(r'[\\/:*?"<>|]', '', tag)
                     
-                    filename = f"{title}_{ip.replace('.', '_')}_{port}.m3u"
-                    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-                        f.write(m3u_content)
+                    fn = f"{tag}_{ip.replace('.', '_')}_{port}.m3u"
+                    with open(os.path.join(OUTPUT_DIR, fn), "w", encoding="utf-8") as f:
+                        f.write(m3u_data)
                     
-                    log(f"🎉 抓取成功，已保存至: {filename}")
-                    success = True
-                    break # 找到一个有效端口就跳到下一个 IP
+                    log(f"🎉 抓取成功: {fn}")
+                    break 
             
-            if not success:
-                log(f"⚠️ IP {ip} 尝试了所有常用端口，均未响应。")
-            
-            # IP 之间的大冷却，防止被封 IP
-            time.sleep(5)
+            # 每个 IP 探测完大休息
+            time.sleep(8)
 
     except Exception as e:
-        log(f"❌ 程序发生崩溃: {e}")
+        log(f"❌ 运行异常: {e}")
 
 if __name__ == "__main__":
     main()
