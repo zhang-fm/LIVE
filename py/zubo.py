@@ -1,46 +1,42 @@
-import requests
+import asyncio
+from playwright.async_api import async_playwright
+import datetime
 import os
-import random
-from datetime import datetime
 
-# 配置
-TARGET_URL = "https://iptv.cqshushu.com/"
-SAVE_DIR = "web_pages"
-UA_LIST = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-]
-
-def download_homepage():
-    os.makedirs(SAVE_DIR, exist_ok=True)
-    headers = {
-        "User-Agent": random.choice(UA_LIST),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,en;q=0.5",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1"
-    }
-
-    try:
-        print(f"正在尝试下载: {TARGET_URL}")
-        # 增加随机延迟模拟真人
-        response = requests.get(TARGET_URL, headers=headers, timeout=15)
-        response.raise_for_status() 
-        response.encoding = 'utf-8' # 强制编码防止乱码
-
-        # 生成文件名：homepage_20240520_1030.html
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"homepage_{timestamp}.html"
-        file_path = os.path.join(SAVE_DIR, filename)
-
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(response.text)
+async def run():
+    async with async_playwright() as p:
+        # 启动浏览器，使用真实浏览器指纹
+        browser = await p.chromium.launch(headless=True)
+        # 设置 context 模拟正常用户
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        )
         
-        print(f"✅ 下载成功！文件大小: {len(response.text)} 字节")
-        print(f"📂 已保存至: {file_path}")
-
-    except Exception as e:
-        print(f"❌ 下载失败: {e}")
+        page = await context.new_page()
+        
+        print("正在打开页面进行 JS 验证...")
+        await page.goto("https://iptv.cqshushu.com/", wait_until="networkidle")
+        
+        # 等待页面重定向或 Cookie 生效，最多等 10 秒
+        await page.wait_for_timeout(5000) 
+        
+        # 获取执行 JS 后的完整 HTML
+        content = await page.content()
+        
+        # 保存内容
+        os.makedirs("web_pages", exist_ok=True)
+        timestamp = datetime.datetime.now().strftime("%m%d_%H%M")
+        filename = f"web_pages/home_{timestamp}.html"
+        
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(content)
+        
+        print(f"✅ 抓取成功！已保存至 {filename}")
+        
+        # 如果你想顺便提取 IP，可以继续在这里写正则
+        # ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", content)
+        
+        await browser.close()
 
 if __name__ == "__main__":
-    download_homepage()
+    asyncio.run(run())
