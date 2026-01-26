@@ -1,0 +1,50 @@
+name: 每日仓库维护清理
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # 每天凌晨 4 点
+  workflow_dispatch:
+
+jobs:
+  cleanup_task:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 执行失效清理 (酒店 & 组播)
+        run: |
+          python py/hotelqingli.py
+          python py/zubo_cleanup.py
+
+      - name: 重新合并所有频道
+        run: python py/merge_m3u.py
+
+      - name: 提交更改
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add hotel/*.m3u zubo/*.m3u
+          git add hotel/hotel_history.txt || true
+          
+          if git diff --staged --quiet; then
+            echo "没有发现失效源。"
+          else
+            git commit -m "🧹 每日维护：清理失效酒店源与组播源"
+            git pull origin main --rebase
+            git push origin main
+          fi
