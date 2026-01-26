@@ -1,9 +1,13 @@
-name: 组播源自动同步
+name: IPTV 组播自动抓取与整合
 
 on:
   schedule:
-    - cron: '35 * * * *'  # 每 6 小时运行
-  workflow_dispatch:
+    # 每小时的第 45 分钟运行一次 (北京时间)
+    - cron: '45 * * * *'
+  push:
+    paths:
+      - 'data/shushu_home.html' # 只要月球宿主传了新源码，立即开工
+  workflow_dispatch:           # 支持手动点击运行
 
 jobs:
   zubo_task:
@@ -25,11 +29,12 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-      - name: 1. 执行组播抓取
-        run: python py/zubo.py
+      - name: 1. 执行组播抓取 (实时显示)
+        env:
+          PYTHONUNBUFFERED: 1 # 确保 print 内容实时显示在控制台
+        run: python py/zubo_final.py
 
-      - name: 2. 执行失效文件清理
-        # 这里联动你的清理脚本，确保抓到的文件都是可用的
+      - name: 2. 执行整合与失效清理
         run: python py/merge_zubo.py
 
       - name: 3. 同步到仓库
@@ -37,13 +42,18 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
+          # 强制拉取远程最新代码防止冲突
+          git pull --rebase origin main
+          
+          # 添加抓取结果和整合结果
           git add zubo/history.txt
           git add zubo/*.m3u
+          # 如果 merge_zubo 会生成汇总文件(如 index.m3u)，也一并添加
+          git add *.m3u || true 
           
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "自动更新：组播源同步与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
-            git pull --rebase origin main
+            git commit -m "自动更新：同步与整合清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
             git push origin main
           else
-            echo "无变更，跳过提交。"
+            echo "没有发现内容变更，跳过本次提交。"
           fi
