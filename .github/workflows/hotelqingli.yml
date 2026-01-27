@@ -2,7 +2,7 @@ name: hotel(清理失效源)
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 20 * * *'
   workflow_dispatch:
 
 jobs:
