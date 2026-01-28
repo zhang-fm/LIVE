@@ -16,7 +16,7 @@ HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
 TIMEOUT = 25 
 
 # 端口字典：根据你刚才的成功日志，85, 9901, 8888 都是大热门
-PRIMARY_PORTS = [9999, 85, 9901, 8888, 8000, 8080, 9001, 8082, 888, 8090, 8081, 50001]
+PRIMARY_PORTS = [9999, 85, 9901, 8888, 8000, 8080, 9001, 8082, 888, 808, 8090, 8081, 50001]
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
