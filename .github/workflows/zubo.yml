@@ -3,9 +3,6 @@ name: 组播自动抓取与整合
 on:
   schedule:
     - cron: '40 * * * *'
-  push:
-    paths:
-      - 'data/shushu_home.html'
   workflow_dispatch:
 
 jobs:
