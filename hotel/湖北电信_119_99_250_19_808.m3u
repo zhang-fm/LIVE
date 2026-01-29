@@ -1,0 +1,157 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-1
+http://119.99.250.19:808/udp/239.3.3.1:10001
+#EXTINF:-1 tvg-id="CCTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-2
+http://119.99.250.19:808/udp/239.3.3.2:10001
+#EXTINF:-1 tvg-id="CCTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-3
+http://119.99.250.19:808/udp/239.3.3.3:10001
+#EXTINF:-1 tvg-id="CCTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-4
+http://119.99.250.19:808/udp/239.3.3.4:10001
+#EXTINF:-1 tvg-id="CCTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-5
+http://119.99.250.19:808/udp/239.3.3.5:10001
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-6
+http://119.99.250.19:808/udp/239.3.3.6:10001
+#EXTINF:-1 tvg-id="CCTV-17" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-17
+http://119.99.250.19:808/udp/239.3.3.17:10001
+#EXTINF:-1 tvg-id="CCTV-8" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-8
+http://119.99.250.19:808/udp/239.3.3.8:10001
+#EXTINF:-1 tvg-id="CCTV-9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-9
+http://119.99.250.19:808/udp/239.3.3.9:10001
+#EXTINF:-1 tvg-id="CCTV-10" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-10
+http://119.99.250.19:808/udp/239.3.3.10:10001
+#EXTINF:-1 tvg-id="CCTV-11" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-11
+http://119.99.250.19:808/udp/239.3.3.11:10001
+#EXTINF:-1 tvg-id="CCTV-12" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-12
+http://119.99.250.19:808/udp/239.3.3.12:10001
+#EXTINF:-1 tvg-id="CCTV-13" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-13
+http://119.99.250.19:808/udp/224.1.1.20:6031
+#EXTINF:-1 tvg-id="CCTV-14" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-14
+http://119.99.250.19:808/udp/224.1.1.21:6032
+#EXTINF:-1 tvg-id="CCTV-15" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV-15
+http://119.99.250.19:808/udp/239.3.3.15:10001
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖南卫视
+http://119.99.250.19:808/udp/239.3.3.18:10001
+#EXTINF:-1 tvg-id="测试节目4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试节目4
+http://119.99.250.19:808/udp/224.1.1.115:6126
+#EXTINF:-1 tvg-id="测试节目5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试节目5
+http://119.99.250.19:808/udp/224.1.1.78:6089
+#EXTINF:-1 tvg-id="湖北生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北生活
+http://119.99.250.19:808/udp/224.1.1.23:6034
+#EXTINF:-1 tvg-id="湖北教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北教育
+http://119.99.250.19:808/udp/224.1.1.22:6033
+#EXTINF:-1 tvg-id="湖北影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北影视
+http://119.99.250.19:808/udp/239.3.3.68:10001
+#EXTINF:-1 tvg-id="湖北经视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北经视
+http://119.99.250.19:808/udp/239.3.3.204:10001
+#EXTINF:-1 tvg-id="湖北电视台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北电视台
+http://119.99.250.19:808/udp/239.3.3.200:10001
+#EXTINF:-1 tvg-id="湖北公共" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北公共
+http://119.99.250.19:808/udp/239.3.3.202:10001
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北卫视
+http://119.99.250.19:808/udp/239.3.3.27:10001
+#EXTINF:-1 tvg-id="WHTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-1
+http://119.99.250.19:808/udp/224.1.1.121:6132
+#EXTINF:-1 tvg-id="WHTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-2
+http://119.99.250.19:808/udp/224.1.1.122:6133
+#EXTINF:-1 tvg-id="WHTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-3
+http://119.99.250.19:808/udp/224.1.1.123:6134
+#EXTINF:-1 tvg-id="WHTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-4
+http://119.99.250.19:808/udp/224.1.1.124:6135
+#EXTINF:-1 tvg-id="WHTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-5
+http://119.99.250.19:808/udp/224.1.1.125:6136
+#EXTINF:-1 tvg-id="WHTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",WHTV-6
+http://119.99.250.19:808/udp/224.1.1.126:6137
+#EXTINF:-1 tvg-id="先锋乒羽" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",先锋乒羽
+http://119.99.250.19:808/udp/224.1.1.127:6138
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",凤凰资讯
+http://119.99.250.19:808/udp/224.1.1.25:6036
+#EXTINF:-1 tvg-id="凤凰中文" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",凤凰中文
+http://119.99.250.19:808/udp/224.1.1.26:6037
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",嘉佳卡通
+http://119.99.250.19:808/udp/224.1.1.57:6068
+#EXTINF:-1 tvg-id="湖北垄上" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",湖北垄上
+http://119.99.250.19:808/udp/239.3.3.203:10001
+#EXTINF:-1 tvg-id="动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",动作电影
+http://119.99.250.19:808/udp/224.1.1.99:6110
+#EXTINF:-1 tvg-id="辛安渡台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",辛安渡台
+http://119.99.250.19:808/udp/224.1.1.14:6025
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",安徽卫视
+http://119.99.250.19:808/udp/239.3.3.103:10001
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",北京卫视
+http://119.99.250.19:808/udp/239.3.3.55:10001
+#EXTINF:-1 tvg-id="兵团卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",兵团卫视
+http://119.99.250.19:808/udp/224.1.1.55:6066
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",东方卫视
+http://119.99.250.19:808/udp/239.3.3.31:10001
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",东南卫视
+http://119.99.250.19:808/udp/239.3.3.19:10001
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",贵州卫视
+http://119.99.250.19:808/udp/239.3.3.43:10001
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",黑龙江卫视
+http://119.99.250.19:808/udp/224.1.1.52:6063
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",河北卫视
+http://119.99.250.19:808/udp/224.1.1.15:6026
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",吉林卫视
+http://119.99.250.19:808/udp/224.1.1.50:6061
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",江苏卫视
+http://119.99.250.19:808/udp/239.3.3.21:10001
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",辽宁卫视
+http://119.99.250.19:808/udp/239.3.3.20:10001
+#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",南方卫视
+http://119.99.250.19:808/udp/224.1.1.49:6060
+#EXTINF:-1 tvg-id="农林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",农林卫视
+http://119.99.250.19:808/udp/224.1.1.58:6069
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",山东卫视
+http://119.99.250.19:808/udp/239.3.3.37:10001
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",天津卫视
+http://119.99.250.19:808/udp/239.3.3.104:10001
+#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",新疆卫视
+http://119.99.250.19:808/udp/224.1.1.56:6067
+#EXTINF:-1 tvg-id="星空卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",星空卫视
+http://119.99.250.19:808/udp/224.1.1.60:6071
+#EXTINF:-1 tvg-id="海南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",海南卫视
+http://119.99.250.19:808/udp/224.1.1.51:6062
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",浙江卫视
+http://119.99.250.19:808/udp/239.3.3.29:10001
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",重庆卫视
+http://119.99.250.19:808/udp/239.3.3.42:10001
+#EXTINF:-1 tvg-id="测试二" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试二
+http://119.99.250.19:808/udp/224.1.1.17:6028
+#EXTINF:-1 tvg-id="测试三" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试三
+http://119.99.250.19:808/udp/224.1.1.22:6033
+#EXTINF:-1 tvg-id="测试四" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试四
+http://119.99.250.19:808/udp/224.1.1.23:6034
+#EXTINF:-1 tvg-id="测试五" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试五
+http://119.99.250.19:808/udp/224.1.1.24:6035
+#EXTINF:-1 tvg-id="测试一" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",测试一
+http://119.99.250.19:808/udp/224.1.1.16:6027
+#EXTINF:-1 tvg-id="好享购物" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",好享购物
+http://119.99.250.19:808/udp/224.1.1.92:6203
+#EXTINF:-1 tvg-id="动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",动作电影
+http://119.99.250.19:808/udp/224.1.1.99:6110
+#EXTINF:-1 tvg-id="家庭影院" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",家庭影院
+http://119.99.250.19:808/udp/239.3.3.201:10001
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",金鹰纪实
+http://119.99.250.19:808/udp/239.3.3.50:10001
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",金鹰卡通
+http://119.99.250.19:808/udp/239.3.3.51:10001
+#EXTINF:-1 tvg-id="CCTV4中文国际欧洲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",CCTV4中文国际欧洲
+http://119.99.250.19:808/udp/239.3.3.52:10001
+#EXTINF:-1 tvg-id="环球奇观" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",环球奇观
+http://119.99.250.19:808/udp/239.3.3.77:10001
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",广东卫视
+http://119.99.250.19:808/udp/239.3.3.89:10001
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",山西卫视
+http://119.99.250.19:808/udp/239.3.3.90:10001
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",陕西卫视
+http://119.99.250.19:808/udp/239.3.3.91:10001
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",河南卫视
+http://119.99.250.19:808/udp/239.3.3.92:10001
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",江西卫视
+http://119.99.250.19:808/udp/239.3.3.93:10001
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",深圳卫视
+http://119.99.250.19:808/udp/239.3.3.94:10001
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",四川卫视
+http://119.99.250.19:808/udp/239.3.3.95:10001
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="湖北省孝感市汉川市酒店 湖北电信",广西卫视
+http://119.99.250.19:808/udp/239.3.3.101:10001
