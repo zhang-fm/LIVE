@@ -5565,6 +5565,54 @@ http://123.10.79.61:808/hls/87/index.m3u8
 http://123.10.79.61:808/hls/99/index.m3u8
 #EXTINF:-1 tvg-id="高清影院" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/高清影院.png" group-title="河南联通",高清影院
 http://123.10.79.61:808/hls/98/index.m3u8
+#EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="山西联通",CCTV1
+http://171.117.121.236:8888/hls/1/index.m3u8
+#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="山西联通",CCTV2
+http://171.117.121.236:8888/hls/2/index.m3u8
+#EXTINF:-1 tvg-id="CCTV3" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV3.png" group-title="山西联通",CCTV3
+http://171.117.121.236:8888/hls/3/index.m3u8
+#EXTINF:-1 tvg-id="CCTV5" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV5.png" group-title="山西联通",CCTV5
+http://171.117.121.236:8888/hls/5/index.m3u8
+#EXTINF:-1 tvg-id="CCTV6" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV6.png" group-title="山西联通",CCTV6
+http://171.117.121.236:8888/hls/6/index.m3u8
+#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV13.png" group-title="山西联通",CCTV13
+http://171.117.121.236:8888/hls/13/index.m3u8
+#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV15.png" group-title="山西联通",CCTV15
+http://171.117.121.236:8888/hls/15/index.m3u8
+#EXTINF:-1 tvg-id="黄河" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/黄河.png" group-title="山西联通",黄河
+http://171.117.121.236:8888/hls/47/index.m3u8
+#EXTINF:-1 tvg-id="山西" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山西.png" group-title="山西联通",山西
+http://171.117.121.236:8888/hls/53/index.m3u8
+#EXTINF:-1 tvg-id="山西公共" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山西公共.png" group-title="山西联通",山西公共
+http://171.117.121.236:8888/hls/51/index.m3u8
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/辽宁卫视.png" group-title="山西联通",辽宁卫视
+http://171.117.121.236:8888/hls/18/index.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/浙江卫视.png" group-title="山西联通",浙江卫视
+http://171.117.121.236:8888/hls/19/index.m3u8
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江苏卫视.png" group-title="山西联通",江苏卫视
+http://171.117.121.236:8888/hls/21/index.m3u8
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/北京卫视.png" group-title="山西联通",北京卫视
+http://171.117.121.236:8888/hls/22/index.m3u8
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/天津卫视.png" group-title="山西联通",天津卫视
+http://171.117.121.236:8888/hls/24/index.m3u8
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/四川卫视.png" group-title="山西联通",四川卫视
+http://171.117.121.236:8888/hls/25/index.m3u8
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/深圳卫视.png" group-title="山西联通",深圳卫视
+http://171.117.121.236:8888/hls/29/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/黑龙江卫视.png" group-title="山西联通",黑龙江卫视
+http://171.117.121.236:8888/hls/30/index.m3u8
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/重庆卫视.png" group-title="山西联通",重庆卫视
+http://171.117.121.236:8888/hls/32/index.m3u8
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山东卫视.png" group-title="山西联通",山东卫视
+http://171.117.121.236:8888/hls/33/index.m3u8
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/云南卫视.png" group-title="山西联通",云南卫视
+http://171.117.121.236:8888/hls/40/index.m3u8
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南卫视.png" group-title="山西联通",湖南卫视
+http://171.117.121.236:8888/hls/16/index.m3u8
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河北卫视.png" group-title="山西联通",河北卫视
+http://171.117.121.236:8888/hls/43/index.m3u8
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/东方卫视.png" group-title="山西联通",东方卫视
+http://171.117.121.236:8888/hls/17/index.m3u8
 #EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="河南电信",CCTV1-综合
 http://1.197.249.88:85/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="河南电信",CCTV2-财经
