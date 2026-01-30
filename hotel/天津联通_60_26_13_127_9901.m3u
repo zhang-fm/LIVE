@@ -1,0 +1,97 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津卫视
+http://60.26.13.127:9901/tsfile/live/16001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津新闻
+http://60.26.13.127:9901/tsfile/live/16002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津文艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津文艺
+http://60.26.13.127:9901/tsfile/live/16003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津影视
+http://60.26.13.127:9901/tsfile/live/16004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津都市" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津都市
+http://60.26.13.127:9901/tsfile/live/16005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津体育
+http://60.26.13.127:9901/tsfile/live/16006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",天津教育
+http://60.26.13.127:9901/tsfile/live/16007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV1-综合
+http://60.26.13.127:9901/tsfile/live/16008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV2-财经
+http://60.26.13.127:9901/tsfile/live/16009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV3-综艺
+http://60.26.13.127:9901/tsfile/live/16010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV4-中文国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV4-中文国际
+http://60.26.13.127:9901/tsfile/live/16011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV5-体育
+http://60.26.13.127:9901/tsfile/live/16012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV6-电影
+http://60.26.13.127:9901/tsfile/live/16013_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-国防军事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV7-国防军事
+http://60.26.13.127:9901/tsfile/live/16014_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV8-电视剧
+http://60.26.13.127:9901/tsfile/live/16015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV9-纪录
+http://60.26.13.127:9901/tsfile/live/16016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV10-科教
+http://60.26.13.127:9901/tsfile/live/16017_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV11-戏曲
+http://60.26.13.127:9901/tsfile/live/16018_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV12-社会与法
+http://60.26.13.127:9901/tsfile/live/16019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV13-新闻
+http://60.26.13.127:9901/tsfile/live/16020_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV14-少儿
+http://60.26.13.127:9901/tsfile/live/16021_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV15-音乐
+http://60.26.13.127:9901/tsfile/live/16022_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV16-奥林匹克" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV16-奥林匹克
+http://60.26.13.127:9901/tsfile/live/16023_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV17-农业农村" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV17-农业农村
+http://60.26.13.127:9901/tsfile/live/16024_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5+-体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",CCTV5+-体育赛事
+http://60.26.13.127:9901/tsfile/live/16025_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",湖南卫视
+http://60.26.13.127:9901/tsfile/live/16026_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",东方卫视
+http://60.26.13.127:9901/tsfile/live/16027_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",浙江卫视
+http://60.26.13.127:9901/tsfile/live/16028_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",江苏卫视
+http://60.26.13.127:9901/tsfile/live/16029_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",北京卫视
+http://60.26.13.127:9901/tsfile/live/16030_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",湖北卫视
+http://60.26.13.127:9901/tsfile/live/16031_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",辽宁卫视
+http://60.26.13.127:9901/tsfile/live/16032_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",吉林卫视
+http://60.26.13.127:9901/tsfile/live/16033_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",广东卫视
+http://60.26.13.127:9901/tsfile/live/16034_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",深圳卫视
+http://60.26.13.127:9901/tsfile/live/16035_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",河南卫视
+http://60.26.13.127:9901/tsfile/live/16036_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",河北卫视
+http://60.26.13.127:9901/tsfile/live/16037_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",云南卫视
+http://60.26.13.127:9901/tsfile/live/16038_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",贵州卫视
+http://60.26.13.127:9901/tsfile/live/16039_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",四川卫视
+http://60.26.13.127:9901/tsfile/live/16040_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",重庆卫视
+http://60.26.13.127:9901/tsfile/live/16041_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",安徽卫视
+http://60.26.13.127:9901/tsfile/live/16042_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",广西卫视
+http://60.26.13.127:9901/tsfile/live/16043_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",江西卫视
+http://60.26.13.127:9901/tsfile/live/16044_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",甘肃卫视
+http://60.26.13.127:9901/tsfile/live/16045_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="海南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",海南卫视
+http://60.26.13.127:9901/tsfile/live/16046_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",山西卫视
+http://60.26.13.127:9901/tsfile/live/16047_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="天津市天津市酒店 天津联通",陕西卫视
+http://60.26.13.127:9901/tsfile/live/16048_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
