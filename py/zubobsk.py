@@ -1,76 +1,67 @@
 import asyncio
 import os
 import re
+import threading
+import http.server
+import socketserver
 from playwright.async_api import async_playwright
 
+# 1. 定义一个简单的静态文件服务器
+def start_local_server():
+    os.chdir("data") # 进入 HTML 所在目录
+    handler = http.server.SimpleHTTPRequestHandler
+    with socketserver.TCPServer(("", 8000), handler) as httpd:
+        print("📡 本地伪装服务器已启动: http://localhost:8000")
+        httpd.serve_forever()
+
 async def main():
+    # 在后台线程启动服务器
+    threading.Thread(target=start_local_server, daemon=True).start()
+    await asyncio.sleep(2) # 等待服务器启动
+
     async with async_playwright() as p:
-        # 启动浏览器
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            viewport={'width': 1344, 'height': 840}
         )
         page = await context.new_page()
 
-        # 1. 定位本地 HTML 文件
-        # GitHub Actions 的工作目录通常是 /home/runner/work/LIVE/LIVE/
-        html_path = os.path.abspath("data/shushu_home.html")
-        
-        if not os.path.exists(html_path):
-            print(f"❌ 找不到文件: {html_path}")
-            # 打印当前目录结构辅助调试
-            print("当前目录列表:")
-            for root, dirs, files in os.walk("."):
-                for name in files:
-                    if "shushu_home" in name:
-                        print(f"找到可能的文件: {os.path.join(root, name)}")
-            return
-
-        print(f"📂 正在加载本地首页: {html_path}")
-        await page.goto(f"file://{html_path}")
+        # 2. 访问本地伪装服务器
+        print("🌐 访问伪装主页...")
+        await page.goto("http://localhost:8000/shushu_home.html")
         await asyncio.sleep(2)
 
-        # 2. 定位 IP 链接并点击
-        # 目标链接通常是 <a class="ip-link" ...>
+        # 3. 模拟点击
         ip_link = await page.query_selector("a.ip-link")
-        
         if ip_link:
-            print("✅ 成功在本地 HTML 中找到 IP 链接。")
-            link_text = await ip_link.inner_text()
-            print(f"🔗 准备点击 IP: {link_text.strip()}")
-
+            print(f"✅ 找到 IP 链接，准备通过 HTTP 协议触发跳转...")
             try:
-                # 监听点击后的跳转
-                print("🚀 正在触发点击跳转到目标服务器...")
-                async with page.expect_navigation(timeout=60000):
+                # 监听跳转，wait_until 改为 commit 只要服务器响应就继续
+                async with page.expect_navigation(wait_until="commit", timeout=60000):
                     await ip_link.click()
                 
-                # 给详情页留出通过验证的时间
-                print(f"📡 已跳转，当前 URL: {page.url}")
-                print("⏳ 等待 15 秒观察 Cloudflare 验证状态...")
-                await asyncio.sleep(15)
+                print(f"🚀 跳转成功！当前地址: {page.url}")
+                print("⏳ 正在等待目标页响应内容 (20s)...")
+                await asyncio.sleep(20)
                 
                 title = await page.title()
                 print(f"📑 最终页面标题: {title}")
                 
-                # 检查是否看到了“查看频道列表”按钮
-                btn = page.get_by_role("button", name=re.compile("查看频道列表"))
-                if await btn.count() > 0:
-                    print("🎉 奇迹发生了！绕过验证看到了按钮。")
-                    await page.screenshot(path="jump_success.png")
+                # 检查结果
+                if "验证中" in title or "Just a moment" in title:
+                    print("❌ 悲报：即便模拟了 HTTP 跳转，GitHub 的 IP 还是被 CF 拦住了。")
                 else:
-                    print("❌ 依然显示验证页或 403。")
-                    await page.screenshot(path="jump_fail.png")
-
+                    btn = page.get_by_role("button", name=re.compile("查看频道列表"))
+                    if await btn.count() > 0:
+                        print("🎉 突破成功！已看到‘查看频道列表’按钮。")
+                
+                await page.screenshot(path="final_result.png")
+                
             except Exception as e:
-                print(f"❌ 跳转过程中发生错误: {e}")
-                await page.screenshot(path="jump_error.png")
+                print(f"❌ 跳转超时或失败: {e}")
+                await page.screenshot(path="timeout_error.png")
         else:
-            print("❌ 在本地 HTML 中未发现 class='ip-link' 的元素。")
-            # 打印前 500 个字符看看 HTML 是否读取正确
-            content = await page.content()
-            print(f"📄 HTML 片段: {content[:500]}")
+            print("❌ 未能在 HTML 中找到链接，请检查 shushu_home.html 内容")
 
         await browser.close()
 
