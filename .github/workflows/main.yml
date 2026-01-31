@@ -1,13 +1,16 @@
-name: IPTV详情自动抓取
+name: IPTV Detail Crawler
 
 on:
-  workflow_dispatch: # 手动触发
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'
 
 jobs:
-  run_crawler:
+  run-spider:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -16,19 +19,20 @@ jobs:
 
       - name: Install Dependencies
         run: |
-         pip install playwright==1.40.0 playwright-stealth==1.0.6
-         playwright install chromium
-         playwright install-deps chromium
+          pip install playwright playwright-stealth
+          playwright install chromium
+          playwright install-deps chromium
 
-      - name: 🚀 执行模拟点击抓取
-        run: python py/zubobsk.py
+      - name: Execute Script
         env:
           PYTHONUNBUFFERED: "1"
+        run: python py/zubobsk.py
 
-      - name: 上传抓取结果 (Artifacts)
+      - name: Upload Debug Files
+        if: always() # 无论成功失败都上传，方便调试
         uses: actions/upload-artifact@v4
         with:
-          name: crawl-results
+          name: debug-results
           path: |
-            detail_page.html
-            error.png
+            *.png
+            detail_page.txt
