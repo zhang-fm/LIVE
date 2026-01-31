@@ -1,69 +1,74 @@
-import requests
-import re
+import asyncio
+import random
 import time
-import os
+from playwright.async_api import async_playwright
+from playwright_stealth import stealth_async
 
-# 配置
-GITHUB_API_URL = "https://api.github.com/repos/kenye201/LIVE/contents/zubo"
-TIMEOUT = 5
-
-def get_file_list():
-    print("Fetching file list from GitHub...")
-    headers = {}
-    if os.getenv("GITHUB_TOKEN"):
-        headers["Authorization"] = f"token {os.getenv('GITHUB_TOKEN')}"
+async def simulate_human_click(page, selector):
+    # 获取元素位置
+    element = await page.wait_for_selector(selector)
+    box = await element.bounding_box()
     
-    r = requests.get(GITHUB_API_URL, headers=headers)
-    r.raise_for_status()
-    return [f['download_url'] for f in r.json() if f['name'].endswith('.m3u')]
+    # 模拟鼠标轨迹移动到元素中心
+    if box:
+        x = box['x'] + box['width'] / 2
+        y = box['y'] + box['height'] / 2
+        # 分几步移动，模拟人类手感
+        await page.mouse.move(x - 50, y - 50)
+        await asyncio.sleep(0.5)
+        await page.mouse.move(x, y, steps=10)
+        await asyncio.sleep(0.2)
+        await page.mouse.click(x, y)
+        print(f"✅ 模拟点击完成: {selector}")
 
-def test_link_speed(url):
-    """在 GitHub Actions 环境下，通常只能测试连接连通性"""
-    try:
-        start = time.time()
-        # 只下载前 128KB 快速判断响应速度
-        with requests.get(url, stream=True, timeout=TIMEOUT) as r:
-            r.raise_for_status()
-            chunk = next(r.iter_content(chunk_size=128*1024))
-            duration = time.time() - start
-            return round(1 / duration, 2) # 返回响应评分
-    except:
-        return 0
-
-def process_m3u(file_url):
-    name = file_url.split('/')[-1]
-    try:
-        r = requests.get(file_url, timeout=10)
-        content = r.text
-        links = re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', content)
+async def main():
+    async with async_playwright() as p:
+        # 启动浏览器
+        browser = await p.chromium.launch(headless=True) # GitHub Actions 必须用无头模式
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            viewport={'width': 1344, 'height': 840} # 匹配你链接里的屏幕尺寸
+        )
         
-        if not links: return None
+        page = await context.new_page()
+        # 绕过指纹检测
+        await stealth_async(page)
         
-        # 取前2个链接测试连通性评分
-        score = sum(test_link_speed(l) for l in links[:2]) / 2
-        return {"name": name, "score": score, "content": content}
-    except:
-        return None
+        # 1. 访问主页
+        url = "https://iptv.cqshushu.com/" # 替换为实际入口地址
+        print(f"正在访问入口页: {url}")
+        await page.goto(url, wait_until="networkidle")
+        
+        # 模拟一些随机滚动，增加 mouseMoves 计数
+        await page.mouse.wheel(0, 500)
+        await asyncio.sleep(1)
+        
+        # 2. 定位并点击 IP 链接
+        # 这里用 class 和 text 组合定位，更加稳健
+        ip_selector = "a.ip-link" 
+        
+        # 获取所有 IP 链接并点击第一个（或者你可以循环点击）
+        links = await page.query_selector_all(ip_selector)
+        if links:
+            print(f"找到 {len(links)} 个 IP 链接，准备进入详情页...")
+            
+            # 捕获点击后产生的新请求或页面跳转
+            async with page.expect_navigation(wait_until="networkidle", timeout=60000):
+                await simulate_human_click(page, ip_selector)
+            
+            # 3. 进入详情页后，抓取内容
+            print(f"成功进入详情页: {page.url}")
+            
+            # 打印详情页标题或内容作为验证
+            content = await page.content()
+            with open("detail_page.html", "w", encoding="utf-8") as f:
+                f.write(content)
+            
+            # 也可以在这里提取具体的播放链接（如 m3u 文本）
+            # play_links = await page.locator("text=http").all_inner_texts()
+            # print(play_links)
 
-def main():
-    urls = get_file_list()
-    results = []
-
-    for url in urls:
-        res = process_m3u(url)
-        if res:
-            results.append(res)
-            print(f"Processed: {res['name']} (Score: {res['score']})")
-
-    # 按评分排序
-    results.sort(key=lambda x: x['score'], reverse=True)
-
-    with open("zubo.m3u", "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
-        for res in results:
-            clean_content = res['content'].replace("#EXTM3U", "").strip()
-            f.write(f"\n# --- Source: {res['name']} ---\n")
-            f.write(clean_content + "\n")
+        await browser.close()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
