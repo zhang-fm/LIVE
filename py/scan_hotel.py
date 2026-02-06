@@ -4,63 +4,43 @@ import random
 import requests
 import concurrent.futures
 from urllib.parse import urlparse
+from tqdm import tqdm  # 引入进度条库
 
 # ===============================
 # 配置区
 # ===============================
-HOTEL_DIR = "./hotel"       # 酒店源目录
-TIMEOUT = 3                 # 探测超时
-MAX_WORKERS = 100           # 并发数
+HOTEL_DIR = "./hotel"
+TIMEOUT = 3
+MAX_WORKERS = 100
 HEADERS = {"User-Agent": "Lavf/58.29.100"}
 
-# ===============================
-# 核心扫描逻辑
-# ===============================
-
 def get_smart_tasks():
-    """
-    智能解析：合并前三位相同的IP，保留不同网段的特征
-    """
-    tasks = {} # Key: "prefix:port", Value: suffix_path
-    
+    """解析并合并网段"""
+    tasks = {}
     if not os.path.exists(HOTEL_DIR):
-        print("❌ 找不到 hotel 文件夹")
-        return []
+        return {}
 
-    print("🧹 正在扫描现有库并合并同类项...")
-    
+    print("Step 1: 🔍 正在分析现有库文件...")
     for file in os.listdir(HOTEL_DIR):
         if not file.endswith(".m3u"): continue
-        
         with open(os.path.join(HOTEL_DIR, file), "r", encoding="utf-8", errors="ignore") as f:
-            lines = f.readlines()
-            # 找到所有 http 链接
-            urls = [l.strip() for l in lines if l.startswith("http")]
-            
+            urls = re.findall(r'http://[^\s,]+', f.read())
             for url in urls:
                 parsed = urlparse(url)
-                netloc = parsed.netloc # 例如 171.43.64.63:85
-                host_parts = netloc.split(':')
+                host_parts = parsed.netloc.split(':')
                 ip = host_parts[0]
                 port = host_parts[1] if len(host_parts) > 1 else "80"
-                
                 ip_parts = ip.split('.')
                 if len(ip_parts) == 4:
-                    # 提取前三位作为合并标准
                     prefix = ".".join(ip_parts[:3]) 
                     key = f"{prefix}:{port}"
-                    
-                    # 如果该网段还没存入，或者存入的是空的，则保存路径
                     if key not in tasks:
                         tasks[key] = parsed.path + "?" + parsed.query
-    
-    print(f"🧬 归类完成，共识别出 {len(tasks)} 个唯一的 C 段网段")
     return tasks
 
 def check_ip(url):
-    """单个 URL 连通性测试"""
+    """探测单个 IP，返回结果供进度条实时显示"""
     try:
-        # 酒店源探测，GET 并只取少量数据即可
         r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, stream=True)
         if r.status_code == 200:
             return url
@@ -70,39 +50,46 @@ def check_ip(url):
 
 def run():
     tasks = get_smart_tasks()
-    if not tasks: return
+    if not tasks:
+        print("❌ 未发现可扫描的特征。")
+        return
 
-    all_discovered_nodes = []
-
+    print(f"🧬 识别到 {len(tasks)} 个唯一 C 段。即将开始扫描...")
+    
+    all_discovered = []
+    
+    # 逐个网段扫描，展示详细过程
     for key, suffix in tasks.items():
         prefix, port = key.split(':')
-        print(f"📡 正在探测 C 段: {prefix}.1~254 (端口: {port})")
-        
-        # 构造 1-254 的扫描列表
         scan_list = [f"http://{prefix}.{i}:{port}{suffix}" for i in range(1, 255)]
         
+        # 使用 tqdm 展示当前网段的扫描进度
+        # desc 设置左侧描述，leave=False 扫描完一个段后清除该进度条，保持界面整洁
+        pbar = tqdm(total=len(scan_list), desc=f"📡 扫描中 {prefix}.x", unit="ip", leave=True)
+        
+        valid_in_segment = []
         with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            # 过滤掉 None 结果
-            results = list(filter(None, executor.map(check_ip, scan_list)))
+            futures = [executor.submit(check_ip, url) for url in scan_list]
+            
+            for future in concurrent.futures.as_completed(futures):
+                res = future.result()
+                if res:
+                    valid_in_segment.append(res)
+                    # 当发现有效 IP 时，在进度条上方打印一条成功记录
+                    pbar.write(f"  ✨ [发现存活] {res}")
+                pbar.update(1) # 每完成一个任务，进度条前进 1
         
-        if results:
-            print(f"   ✅ 发现 {len(results)} 个存活节点！")
-            all_discovered_nodes.extend(results)
-        else:
-            print(f"   ❌ 该段暂无存活。")
+        pbar.close() # 结束当前段进度条
+        if valid_in_segment:
+            all_discovered.extend(valid_in_segment)
+            print(f"✅ 网段 {prefix}.x 扫描完成，新增 {len(valid_in_segment)} 个节点")
 
-    # --- 最终汇总 ---
-    if all_discovered_nodes:
-        # 提取这些有效 URL 的 IP 和端口，方便你后续批量替换
-        valid_hosts = sorted(list(set([urlparse(u).netloc for u in all_discovered_nodes])))
-        
+    # 保存最终结果
+    if all_discovered:
+        hosts = sorted(list(set([urlparse(u).netloc for u in all_discovered])))
         with open("active_hotel_hosts.txt", "w", encoding="utf-8") as f:
-            for host in valid_hosts:
-                f.write(host + "\n")
-        
-        print(f"\n✨ 扫描大功告成！")
-        print(f"📝 所有存活的酒店 IP 端口已存入: active_hotel_hosts.txt")
-        print(f"🚀 你现在可以用这些新 IP 替换旧 m3u 里的地址了。")
+            f.write("\n".join(hosts))
+        print(f"\n🎉 扫描结束！共发现 {len(hosts)} 个存活酒店主机。")
 
 if __name__ == "__main__":
     run()
