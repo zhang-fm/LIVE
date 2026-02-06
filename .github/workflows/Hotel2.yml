@@ -2,7 +2,7 @@ name: Hotel IPTV Daily Refresh
 
 on:
   schedule:
-    - cron: '0 18 * * *' # 每天北京时间凌晨2点
+    - cron: '0 */6 * * *' # 每天北京时间凌晨2点
   workflow_dispatch:
 
 jobs:
