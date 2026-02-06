@@ -20,8 +20,8 @@ jobs:
       - name: Install Dependencies
         run: pip install requests tqdm
 
-     # - name: Step 1 - Scan New IPs
-        #run: python py/scan_hotel.py
+      - name: Step 1 - Scan New IPs
+        run: python py/scan_hotel.py
 
       - name: Step 2 - Rebuild M3U Lists
         run: python py/rebuild_m3u.py
