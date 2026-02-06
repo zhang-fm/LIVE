@@ -1,35 +1,36 @@
-name: Hotel IPTV Reborn AutoTask
+name: Hotel IPTV Daily Refresh
 
 on:
   schedule:
-    - cron: '0 17 * * *' # 每天北京时间凌晨1点运行
+    - cron: '0 18 * * *' # 每天北京时间凌晨2点
   workflow_dispatch:
 
 jobs:
-  run-task:
+  refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install Dependencies
+      - name: Install
         run: pip install requests tqdm
 
-      - name: Step 1 - Scan New IPs
-        run: python py/scan_hotel.py
-
-      - name: Step 2 - Rebuild M3U Lists
-        run: python py/rebuild_m3u.py
-
-      - name: Step 3 - Commit and Push
+      - name: Run Scan and Rebuild
         run: |
-          git config --global user.name "HotelRebornBot"
+          python py/scan_hotel.py
+          python py/rebuild_m3u.py
+
+      - name: Commit Latest Sources
+        run: |
+          git config --global user.name "HotelFreshBot"
           git config --global user.email "bot@iptv.com"
+          # 必须 add 整个目录，因为旧文件已被删除，新文件需要被追踪
           git add reborn_list/ py/scan_map.json
-          git commit -m "Update Reborn Sources: $(date +'%Y-%m-%d %H:%M')" || exit 0
+          # 如果没有任何发现，则不提交
+          git commit -m "IPTV Refresh: $(date +'%Y-%m-%d %H:%M')" || exit 0
           git push
