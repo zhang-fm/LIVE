@@ -1,0 +1,32 @@
+name: Hotel IP Range Scan
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # 每周一运行一次
+  workflow_dispatch: # 允许手动点击运行
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Scanner
+        run: python scan_hotel.py # 假设你上面的脚本存为这个名字
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "HotelScanner"
+          git config --global user.email "actions@github.com"
+          git add scan_results/
+          git commit -m "Update scanned hotel sources" || exit 0
+          git push
