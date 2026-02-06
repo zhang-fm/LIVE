@@ -21,7 +21,7 @@ jobs:
         run: pip install requests
 
       - name: Run Scanner
-        run: python scan_hotel.py # 假设你上面的脚本存为这个名字
+        run: python py/scan_hotel.py # 假设你上面的脚本存为这个名字
 
       - name: Commit and Push
         run: |
