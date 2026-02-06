@@ -1,12 +1,12 @@
-name: Hotel IP Range Scan
+name: Hotel IPTV Reborn AutoTask
 
 on:
   schedule:
-    - cron: '0 0 * * 1' # 每周一运行一次
-  workflow_dispatch: # 允许手动点击运行
+    - cron: '0 17 * * *' # 每天北京时间凌晨1点运行
+  workflow_dispatch:
 
 jobs:
-  scan:
+  run-task:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -18,16 +18,18 @@ jobs:
           python-version: '3.9'
 
       - name: Install Dependencies
-        run: |
-          pip install requests tqdm  # 在这里加上 tqdm
+        run: pip install requests tqdm
 
-      - name: Run Scanner
-        run: python py/scan_hotel.py # 假设你上面的脚本存为这个名字
+      - name: Step 1 - Scan New IPs
+        run: python py/scan_hotel.py
 
-      - name: Commit and Push
+      - name: Step 2 - Rebuild M3U Lists
+        run: python py/rebuild_m3u.py
+
+      - name: Step 3 - Commit and Push
         run: |
-          git config --global user.name "HotelScanner"
-          git config --global user.email "actions@github.com"
-          git add scan_results/
-          git commit -m "Update scanned hotel sources" || exit 0
+          git config --global user.name "HotelRebornBot"
+          git config --global user.email "bot@iptv.com"
+          git add reborn_list/ py/scan_map.json
+          git commit -m "Update Reborn Sources: $(date +'%Y-%m-%d %H:%M')" || exit 0
           git push
