@@ -1,8 +1,4 @@
-import os
-import re
-import json
-import requests
-import concurrent.futures
+import os, re, json, requests, concurrent.futures
 from urllib.parse import urlparse
 from tqdm import tqdm
 
@@ -16,12 +12,11 @@ def run_scan():
     tasks = {} 
     if not os.path.exists(HOTEL_DIR): return
     
-    # 1. 扫描 hotel 目录提取基因
-    print("🧬 正在提取旧 IP 基因...")
+    # 1. 提取基因 (过滤掉旧的 REBORN 文件，只从原始库提取)
+    print("🧬 正在分析原始酒店基因库...")
     for file in os.listdir(HOTEL_DIR):
         if file.endswith(".m3u") and not file.startswith("REBORN"):
             with open(os.path.join(HOTEL_DIR, file), "r", encoding="utf-8", errors="ignore") as f:
-                # 匹配 http://ip:port/path
                 urls = re.findall(r'http://([\d\.]+:\d+)(/[^\s,]+)', f.read())
                 for host, path in urls:
                     prefix = ".".join(host.split('.')[:3])
@@ -31,40 +26,32 @@ def run_scan():
                         tasks[key] = {"old_host": host, "path": path}
 
     scan_results = []
-    # 2. 遍历网段进行爆破
+    # 2. 并发扫描
+    print(f"📡 开始实时探测 {len(tasks)} 个目标网段...")
     for key, info in tasks.items():
         prefix, port = key.split(':')
         scan_list = [f"http://{prefix}.{i}:{port}{info['path']}" for i in range(1, 255)]
         
         valid_found = []
-        pbar = tqdm(total=len(scan_list), desc=f"📡 扫描 {prefix}.x", leave=False)
-        
-        def check_url(url):
-            try:
-                # 只取 Header 快速判断
-                r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, stream=True)
-                return url if r.status_code == 200 else None
-            except: return None
-
         with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            futures = [executor.submit(check_url, u) for u in scan_list]
+            # 使用列表推导式配合 requests 探测
+            futures = {executor.submit(lambda u: requests.get(u, headers=HEADERS, timeout=TIMEOUT, stream=True).status_code == 200, url): url for url in scan_list}
             for future in concurrent.futures.as_completed(futures):
-                res = future.result()
-                if res:
-                    new_host = urlparse(res).netloc
-                    valid_found.append(new_host)
-                    pbar.write(f"  ✨ [发现存活] {new_host}")
-                pbar.update(1)
-        pbar.close()
+                try:
+                    if future.result():
+                        res_url = futures[future]
+                        valid_found.append(urlparse(res_url).netloc)
+                except: pass
         
         for v_host in valid_found:
+            print(f"  ✨ [核心存活] {v_host}")
             scan_results.append({"old_host": info['old_host'], "new_host": v_host})
 
-    # 3. 存储映射关系
+    # 3. 保存映射
     os.makedirs("py", exist_ok=True)
     with open(MAP_FILE, "w", encoding="utf-8") as f:
         json.dump(scan_results, f, indent=4, ensure_ascii=False)
-    print(f"💾 扫描完成，映射关系已保存。")
+    print(f"💾 映射表更新完成，共计 {len(scan_results)} 个最新活跃节点。")
 
 if __name__ == "__main__":
     run_scan()
