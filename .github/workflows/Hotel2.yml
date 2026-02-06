@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Scan and Rebuild
         run: |
-          #python py/scan_hotel.py
+          python py/scan_hotel.py
           python py/rebuild_m3u.py
 
       - name: Commit Latest Sources
