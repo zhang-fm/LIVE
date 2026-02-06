@@ -121,9 +121,9 @@ http://123.10.79.125:808/hls/64/index.m3u8
 http://123.10.79.125:808/hls/65/index.m3u8
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://tb.yubo.qzz.io/logo/嘉佳卡通.png" group-title="河南联通_123.10.79.125:808",嘉佳卡通
 http://123.10.79.125:808/hls/66/index.m3u8
-#EXTINF:-1 tvg-id="中国教育-1" tvg-logo="https://tb.yubo.qzz.io/logo/中国教育-1.png" group-title="河南联通_123.10.79.125:808",中国教育-1
+#EXTINF:-1 tvg-id="中国教育-1" tvg-logo="https://tb.yubo.qzz.io/logo/中国教育1.png" group-title="河南联通_123.10.79.125:808",中国教育1
 http://123.10.79.125:808/hls/67/index.m3u8
-#EXTINF:-1 tvg-id="中国教育-4" tvg-logo="https://tb.yubo.qzz.io/logo/中国教育-4.png" group-title="河南联通_123.10.79.125:808",中国教育-4
+#EXTINF:-1 tvg-id="中国教育-4" tvg-logo="https://tb.yubo.qzz.io/logo/中国教育4.png" group-title="河南联通_123.10.79.125:808",中国教育4
 http://123.10.79.125:808/hls/68/index.m3u8
 #EXTINF:-1 tvg-id="收视指南" tvg-logo="https://tb.yubo.qzz.io/logo/收视指南.png" group-title="河南联通_123.10.79.125:808",收视指南
 http://123.10.79.125:808/hls/75/index.m3u8
@@ -133,9 +133,9 @@ http://123.10.79.125:808/hls/76/index.m3u8
 http://123.10.79.125:808/hls/69/index.m3u8
 #EXTINF:-1 tvg-id="移动戏曲" tvg-logo="https://tb.yubo.qzz.io/logo/移动戏曲.png" group-title="河南联通_123.10.79.125:808",移动戏曲
 http://123.10.79.125:808/hls/74/index.m3u8
-#EXTINF:-1 tvg-id="江苏卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/江苏卫视高清.png" group-title="河南联通_123.10.79.125:808",江苏卫视高清
+#EXTINF:-1 tvg-id="江苏卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/江苏卫视.png" group-title="河南联通_123.10.79.125:808",江苏卫视
 http://123.10.79.125:808/hls/71/index.m3u8
-#EXTINF:-1 tvg-id="金鹰纪实高清" tvg-logo="https://tb.yubo.qzz.io/logo/金鹰纪实高清.png" group-title="河南联通_123.10.79.125:808",金鹰纪实高清
+#EXTINF:-1 tvg-id="金鹰纪实高清" tvg-logo="https://tb.yubo.qzz.io/logo/金鹰纪实.png" group-title="河南联通_123.10.79.125:808",金鹰纪实
 http://123.10.79.125:808/hls/72/index.m3u8
 #EXTINF:-1 tvg-id="凤凰卫视中文台" tvg-logo="https://tb.yubo.qzz.io/logo/凤凰卫视中文台.png" group-title="河南联通_123.10.79.125:808",凤凰卫视中文台
 https://playtv-live.ifeng.com/live/06OLEGEGM4G.flv
@@ -165,7 +165,7 @@ http://123.10.79.125:808/hls/85/index.m3u8
 http://123.10.79.125:808/hls/92/index.m3u8
 #EXTINF:-1 tvg-id="军事" tvg-logo="https://tb.yubo.qzz.io/logo/军事.png" group-title="河南联通_123.10.79.125:808",军事
 http://123.10.79.125:808/hls/93/index.m3u8
-#EXTINF:-1 tvg-id="高清纪实" tvg-logo="https://tb.yubo.qzz.io/logo/高清纪实.png" group-title="河南联通_123.10.79.125:808",高清纪实
+#EXTINF:-1 tvg-id="高清纪实" tvg-logo="https://tb.yubo.qzz.io/logo/纪实.png" group-title="河南联通_123.10.79.125:808",纪实
 http://123.10.79.125:808/hls/95/index.m3u8
 #EXTINF:-1 tvg-id="动作影院" tvg-logo="https://tb.yubo.qzz.io/logo/动作影院.png" group-title="河南联通_123.10.79.125:808",动作影院
 http://123.10.79.125:808/hls/97/index.m3u8
@@ -177,7 +177,7 @@ http://123.10.79.125:808/hls/102/index.m3u8
 http://123.10.79.125:808/hls/87/index.m3u8
 #EXTINF:-1 tvg-id="家庭影院" tvg-logo="https://tb.yubo.qzz.io/logo/家庭影院.png" group-title="河南联通_123.10.79.125:808",家庭影院
 http://123.10.79.125:808/hls/99/index.m3u8
-#EXTINF:-1 tvg-id="高清影院" tvg-logo="https://tb.yubo.qzz.io/logo/高清影院.png" group-title="河南联通_123.10.79.125:808",高清影院
+#EXTINF:-1 tvg-id="高清影院" tvg-logo="https://tb.yubo.qzz.io/logo/影院.png" group-title="河南联通_123.10.79.125:808",影院
 http://123.10.79.125:808/hls/98/index.m3u8
 #EXTINF:-1 tvg-id="经典电影" tvg-logo="https://tb.yubo.qzz.io/logo/经典电影.png" group-title="河南联通_123.10.79.125:808",经典电影
 #EXTINF:-1 tvg-id="周星驰电影" tvg-logo="https://tb.yubo.qzz.io/logo/周星驰电影.png" group-title="河南联通_123.10.79.125:808",周星驰电影

@@ -1,7 +1,7 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-1.png" group-title="河南移动_39.164.174.149:9901",CCTV-1
 http://39.164.174.149:9901/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV2.png" group-title="河南移动_39.164.174.149:9901",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-2.png" group-title="河南移动_39.164.174.149:9901",CCTV-2
 http://39.164.174.149:9901/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV-3" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-3.png" group-title="河南移动_39.164.174.149:9901",CCTV-3
 http://39.164.174.149:9901/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0

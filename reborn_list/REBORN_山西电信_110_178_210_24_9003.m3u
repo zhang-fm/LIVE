@@ -1,37 +1,37 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV1.png" group-title="山西电信_110.178.210.24:9003",CCTV1
+#EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-1.png" group-title="山西电信_110.178.210.24:9003",CCTV-1
 http://110.178.210.24:9003/hls/1/index.m3u8
-#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV2.png" group-title="山西电信_110.178.210.24:9003",CCTV2
+#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-2.png" group-title="山西电信_110.178.210.24:9003",CCTV-2
 http://110.178.210.24:9003/hls/2/index.m3u8
-#EXTINF:-1 tvg-id="CCTV3" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV3.png" group-title="山西电信_110.178.210.24:9003",CCTV3
+#EXTINF:-1 tvg-id="CCTV3" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-3.png" group-title="山西电信_110.178.210.24:9003",CCTV-3
 http://110.178.210.24:9003/hls/3/index.m3u8
-#EXTINF:-1 tvg-id="CCTV4" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV4.png" group-title="山西电信_110.178.210.24:9003",CCTV4
+#EXTINF:-1 tvg-id="CCTV4" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-4.png" group-title="山西电信_110.178.210.24:9003",CCTV-4
 http://110.178.210.24:9003/hls/4/index.m3u8
-#EXTINF:-1 tvg-id="CCTV5+" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV5+.png" group-title="山西电信_110.178.210.24:9003",CCTV5+
+#EXTINF:-1 tvg-id="CCTV5+" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-5+.png" group-title="山西电信_110.178.210.24:9003",CCTV-5+
 http://110.178.210.24:9003/hls/6/index.m3u8
-#EXTINF:-1 tvg-id="CCTV6" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV6.png" group-title="山西电信_110.178.210.24:9003",CCTV6
+#EXTINF:-1 tvg-id="CCTV6" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-6.png" group-title="山西电信_110.178.210.24:9003",CCTV-6
 http://110.178.210.24:9003/hls/7/index.m3u8
-#EXTINF:-1 tvg-id="CCTV7" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV7.png" group-title="山西电信_110.178.210.24:9003",CCTV7
+#EXTINF:-1 tvg-id="CCTV7" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-7.png" group-title="山西电信_110.178.210.24:9003",CCTV-7
 http://110.178.210.24:9003/hls/8/index.m3u8
-#EXTINF:-1 tvg-id="CCTV8" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV8.png" group-title="山西电信_110.178.210.24:9003",CCTV8
+#EXTINF:-1 tvg-id="CCTV8" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-8.png" group-title="山西电信_110.178.210.24:9003",CCTV-8
 http://110.178.210.24:9003/hls/9/index.m3u8
-#EXTINF:-1 tvg-id="CCTV9" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV9.png" group-title="山西电信_110.178.210.24:9003",CCTV9
+#EXTINF:-1 tvg-id="CCTV9" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-9.png" group-title="山西电信_110.178.210.24:9003",CCTV-9
 http://110.178.210.24:9003/hls/10/index.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV10.png" group-title="山西电信_110.178.210.24:9003",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-10.png" group-title="山西电信_110.178.210.24:9003",CCTV-10
 http://110.178.210.24:9003/hls/11/index.m3u8
-#EXTINF:-1 tvg-id="CCTV11" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV11.png" group-title="山西电信_110.178.210.24:9003",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-11.png" group-title="山西电信_110.178.210.24:9003",CCTV-11
 http://110.178.210.24:9003/hls/12/index.m3u8
-#EXTINF:-1 tvg-id="CCTV12" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV12.png" group-title="山西电信_110.178.210.24:9003",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-12.png" group-title="山西电信_110.178.210.24:9003",CCTV-12
 http://110.178.210.24:9003/hls/13/index.m3u8
-#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV13.png" group-title="山西电信_110.178.210.24:9003",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-13.png" group-title="山西电信_110.178.210.24:9003",CCTV-13
 http://110.178.210.24:9003/hls/14/index.m3u8
-#EXTINF:-1 tvg-id="CCTV14" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV14.png" group-title="山西电信_110.178.210.24:9003",CCTV14
+#EXTINF:-1 tvg-id="CCTV14" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-14.png" group-title="山西电信_110.178.210.24:9003",CCTV-14
 http://110.178.210.24:9003/hls/15/index.m3u8
-#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV15.png" group-title="山西电信_110.178.210.24:9003",CCTV15
+#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-15.png" group-title="山西电信_110.178.210.24:9003",CCTV-15
 http://110.178.210.24:9003/hls/16/index.m3u8
-#EXTINF:-1 tvg-id="CCTV16" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV16.png" group-title="山西电信_110.178.210.24:9003",CCTV16
+#EXTINF:-1 tvg-id="CCTV16" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-16.png" group-title="山西电信_110.178.210.24:9003",CCTV-16
 http://110.178.210.24:9003/hls/17/index.m3u8
-#EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV17.png" group-title="山西电信_110.178.210.24:9003",CCTV17
+#EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-17.png" group-title="山西电信_110.178.210.24:9003",CCTV-17
 http://110.178.210.24:9003/hls/18/index.m3u8
 #EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://tb.yubo.qzz.io/logo/山西卫视.png" group-title="山西电信_110.178.210.24:9003",山西卫视
 http://110.178.210.24:9003/hls/19/index.m3u8

@@ -1,69 +1,69 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV1综合高清" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV1综合高清.png" group-title="山东联通_39.77.77.221:85",CCTV1综合高清
+#EXTINF:-1 tvg-id="CCTV1综合高清" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-1.png" group-title="山东联通_39.77.77.221:85",CCTV-1
 http://39.77.77.221:85/tsfile/live/0002_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV2财经高清" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV2财经高清.png" group-title="山东联通_39.77.77.221:85",CCTV2财经高清
+#EXTINF:-1 tvg-id="CCTV2财经高清" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-2.png" group-title="山东联通_39.77.77.221:85",CCTV-2
 http://39.77.77.221:85/tsfile/live/0002_3.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV3综艺" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV3综艺.png" group-title="山东联通_39.77.77.221:85",CCTV3综艺
+#EXTINF:-1 tvg-id="CCTV3综艺" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-3.png" group-title="山东联通_39.77.77.221:85",CCTV-3
 http://39.77.77.221:85/tsfile/live/0002_4.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV4中文国际" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV4中文国际.png" group-title="山东联通_39.77.77.221:85",CCTV4中文国际
+#EXTINF:-1 tvg-id="CCTV4中文国际" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-4.png" group-title="山东联通_39.77.77.221:85",CCTV-4
 http://39.77.77.221:85/tsfile/live/0002_5.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5体育" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV5体育.png" group-title="山东联通_39.77.77.221:85",CCTV5体育
+#EXTINF:-1 tvg-id="CCTV5体育" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-5.png" group-title="山东联通_39.77.77.221:85",CCTV-5
 http://39.77.77.221:85/tsfile/live/0002_6.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV5+体育赛事.png" group-title="山东联通_39.77.77.221:85",CCTV5+体育赛事
+#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-5+.png" group-title="山东联通_39.77.77.221:85",CCTV-5+
 http://39.77.77.221:85/tsfile/live/0005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV6电影" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV6电影.png" group-title="山东联通_39.77.77.221:85",CCTV6电影
+#EXTINF:-1 tvg-id="CCTV6电影" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-6.png" group-title="山东联通_39.77.77.221:85",CCTV-6
 http://39.77.77.221:85/tsfile/live/0002_7.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV7军事 农业" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV7军事 农业.png" group-title="山东联通_39.77.77.221:85",CCTV7军事 农业
+#EXTINF:-1 tvg-id="CCTV7军事 农业" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-7.png" group-title="山东联通_39.77.77.221:85",CCTV-7
 http://39.77.77.221:85/tsfile/live/0002_8.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV8电视剧" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV8电视剧.png" group-title="山东联通_39.77.77.221:85",CCTV8电视剧
+#EXTINF:-1 tvg-id="CCTV8电视剧" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-8.png" group-title="山东联通_39.77.77.221:85",CCTV-8
 http://39.77.77.221:85/tsfile/live/0002_9.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV9记录" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV9记录.png" group-title="山东联通_39.77.77.221:85",CCTV9记录
+#EXTINF:-1 tvg-id="CCTV9记录" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-9.png" group-title="山东联通_39.77.77.221:85",CCTV-9
 http://39.77.77.221:85/tsfile/live/0002_10.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV10科教" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV10科教.png" group-title="山东联通_39.77.77.221:85",CCTV10科教
+#EXTINF:-1 tvg-id="CCTV10科教" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-10.png" group-title="山东联通_39.77.77.221:85",CCTV-10
 http://39.77.77.221:85/tsfile/live/0002_11.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV11戏曲" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV11戏曲.png" group-title="山东联通_39.77.77.221:85",CCTV11戏曲
+#EXTINF:-1 tvg-id="CCTV11戏曲" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-11.png" group-title="山东联通_39.77.77.221:85",CCTV-11
 http://39.77.77.221:85/tsfile/live/0002_12.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV12社会与法" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV12社会与法.png" group-title="山东联通_39.77.77.221:85",CCTV12社会与法
+#EXTINF:-1 tvg-id="CCTV12社会与法" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-12.png" group-title="山东联通_39.77.77.221:85",CCTV-12
 http://39.77.77.221:85/tsfile/live/0002_13.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV13新闻" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV13新闻.png" group-title="山东联通_39.77.77.221:85",CCTV13新闻
+#EXTINF:-1 tvg-id="CCTV13新闻" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-13.png" group-title="山东联通_39.77.77.221:85",CCTV-13
 http://39.77.77.221:85/tsfile/live/0002_14.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV14少儿" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV14少儿.png" group-title="山东联通_39.77.77.221:85",CCTV14少儿
+#EXTINF:-1 tvg-id="CCTV14少儿" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-14.png" group-title="山东联通_39.77.77.221:85",CCTV-14
 http://39.77.77.221:85/tsfile/live/0002_15.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV15音乐" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV15音乐.png" group-title="山东联通_39.77.77.221:85",CCTV15音乐
+#EXTINF:-1 tvg-id="CCTV15音乐" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-15.png" group-title="山东联通_39.77.77.221:85",CCTV-15
 http://39.77.77.221:85/tsfile/live/0002_16.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="QTV-1" tvg-logo="https://tb.yubo.qzz.io/logo/QTV-1.png" group-title="山东联通_39.77.77.221:85",QTV-1
+#EXTINF:-1 tvg-id="QTV-1" tvg-logo="https://tb.yubo.qzz.io/logo/QTV1.png" group-title="山东联通_39.77.77.221:85",QTV1
 http://39.77.77.221:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="QTV-6" tvg-logo="https://tb.yubo.qzz.io/logo/QTV-6.png" group-title="山东联通_39.77.77.221:85",QTV-6
+#EXTINF:-1 tvg-id="QTV-6" tvg-logo="https://tb.yubo.qzz.io/logo/QTV6.png" group-title="山东联通_39.77.77.221:85",QTV6
 http://39.77.77.221:85/tsfile/live/0002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="QTV-3" tvg-logo="https://tb.yubo.qzz.io/logo/QTV-3.png" group-title="山东联通_39.77.77.221:85",QTV-3
+#EXTINF:-1 tvg-id="QTV-3" tvg-logo="https://tb.yubo.qzz.io/logo/QTV3.png" group-title="山东联通_39.77.77.221:85",QTV3
 http://39.77.77.221:85/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="QTV-4" tvg-logo="https://tb.yubo.qzz.io/logo/QTV-4.png" group-title="山东联通_39.77.77.221:85",QTV-4
+#EXTINF:-1 tvg-id="QTV-4" tvg-logo="https://tb.yubo.qzz.io/logo/QTV4.png" group-title="山东联通_39.77.77.221:85",QTV4
 http://39.77.77.221:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://tb.yubo.qzz.io/logo/河南卫视.png" group-title="山东联通_39.77.77.221:85",河南卫视
 http://39.77.77.221:85/tsfile/live/0139_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://tb.yubo.qzz.io/logo/山东卫视.png" group-title="山东联通_39.77.77.221:85",山东卫视
 http://39.77.77.221:85/tsfile/live/0002_17.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/湖南卫视高清.png" group-title="山东联通_39.77.77.221:85",湖南卫视高清
+#EXTINF:-1 tvg-id="湖南卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/湖南卫视.png" group-title="山东联通_39.77.77.221:85",湖南卫视
 http://39.77.77.221:85/tsfile/live/0002_18.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="浙江卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/浙江卫视高清.png" group-title="山东联通_39.77.77.221:85",浙江卫视高清
+#EXTINF:-1 tvg-id="浙江卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/浙江卫视.png" group-title="山东联通_39.77.77.221:85",浙江卫视
 http://39.77.77.221:85/tsfile/live/0002_19.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="东方卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/东方卫视高清.png" group-title="山东联通_39.77.77.221:85",东方卫视高清
+#EXTINF:-1 tvg-id="东方卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/东方卫视.png" group-title="山东联通_39.77.77.221:85",东方卫视
 http://39.77.77.221:85/tsfile/live/0002_20.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="江苏卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/江苏卫视高清.png" group-title="山东联通_39.77.77.221:85",江苏卫视高清
+#EXTINF:-1 tvg-id="江苏卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/江苏卫视.png" group-title="山东联通_39.77.77.221:85",江苏卫视
 http://39.77.77.221:85/tsfile/live/0002_21.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="北京卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/北京卫视高清.png" group-title="山东联通_39.77.77.221:85",北京卫视高清
+#EXTINF:-1 tvg-id="北京卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/北京卫视.png" group-title="山东联通_39.77.77.221:85",北京卫视
 http://39.77.77.221:85/tsfile/live/0002_22.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="安徽卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/安徽卫视高清.png" group-title="山东联通_39.77.77.221:85",安徽卫视高清
+#EXTINF:-1 tvg-id="安徽卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/安徽卫视.png" group-title="山东联通_39.77.77.221:85",安徽卫视
 http://39.77.77.221:85/tsfile/live/0002_23.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="深圳卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/深圳卫视高清.png" group-title="山东联通_39.77.77.221:85",深圳卫视高清
+#EXTINF:-1 tvg-id="深圳卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/深圳卫视.png" group-title="山东联通_39.77.77.221:85",深圳卫视
 http://39.77.77.221:85/tsfile/live/0002_24.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖北卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/湖北卫视高清.png" group-title="山东联通_39.77.77.221:85",湖北卫视高清
+#EXTINF:-1 tvg-id="湖北卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/湖北卫视.png" group-title="山东联通_39.77.77.221:85",湖北卫视
 http://39.77.77.221:85/tsfile/live/0002_25.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="广东卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/广东卫视高清.png" group-title="山东联通_39.77.77.221:85",广东卫视高清
+#EXTINF:-1 tvg-id="广东卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/广东卫视.png" group-title="山东联通_39.77.77.221:85",广东卫视
 http://39.77.77.221:85/tsfile/live/0002_26.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="辽宁卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/辽宁卫视高清.png" group-title="山东联通_39.77.77.221:85",辽宁卫视高清
+#EXTINF:-1 tvg-id="辽宁卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/辽宁卫视.png" group-title="山东联通_39.77.77.221:85",辽宁卫视
 http://39.77.77.221:85/tsfile/live/0002_27.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="黑龙江卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/黑龙江卫视高清.png" group-title="山东联通_39.77.77.221:85",黑龙江卫视高清
+#EXTINF:-1 tvg-id="黑龙江卫视高清" tvg-logo="https://tb.yubo.qzz.io/logo/黑龙江卫视.png" group-title="山东联通_39.77.77.221:85",黑龙江卫视
 http://39.77.77.221:85/tsfile/live/0002_28.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://tb.yubo.qzz.io/logo/江西卫视.png" group-title="山东联通_39.77.77.221:85",江西卫视
 http://39.77.77.221:85/tsfile/live/0002_29.m3u8?key=txiptv&amp;playlive=1&amp;authid=0

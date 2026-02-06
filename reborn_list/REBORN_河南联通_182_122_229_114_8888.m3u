@@ -1,33 +1,33 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV01" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV01.png" group-title="河南联通_182.122.229.114:8888",CCTV01
+#EXTINF:-1 tvg-id="CCTV01" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-01.png" group-title="河南联通_182.122.229.114:8888",CCTV-01
 http://182.122.229.114:8888/hls/1/index.m3u8
-#EXTINF:-1 tvg-id="CCTV02" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV02.png" group-title="河南联通_182.122.229.114:8888",CCTV02
+#EXTINF:-1 tvg-id="CCTV02" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-02.png" group-title="河南联通_182.122.229.114:8888",CCTV-02
 http://182.122.229.114:8888/hls/2/index.m3u8
-#EXTINF:-1 tvg-id="CCTV03" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV03.png" group-title="河南联通_182.122.229.114:8888",CCTV03
+#EXTINF:-1 tvg-id="CCTV03" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-03.png" group-title="河南联通_182.122.229.114:8888",CCTV-03
 http://182.122.229.114:8888/hls/3/index.m3u8
-#EXTINF:-1 tvg-id="CCTV04" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV04.png" group-title="河南联通_182.122.229.114:8888",CCTV04
+#EXTINF:-1 tvg-id="CCTV04" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-04.png" group-title="河南联通_182.122.229.114:8888",CCTV-04
 http://182.122.229.114:8888/hls/4/index.m3u8
-#EXTINF:-1 tvg-id="CCTV05" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV05.png" group-title="河南联通_182.122.229.114:8888",CCTV05
+#EXTINF:-1 tvg-id="CCTV05" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-05.png" group-title="河南联通_182.122.229.114:8888",CCTV-05
 http://182.122.229.114:8888/hls/5/index.m3u8
-#EXTINF:-1 tvg-id="CCTV06" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV06.png" group-title="河南联通_182.122.229.114:8888",CCTV06
+#EXTINF:-1 tvg-id="CCTV06" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-06.png" group-title="河南联通_182.122.229.114:8888",CCTV-06
 http://182.122.229.114:8888/hls/6/index.m3u8
-#EXTINF:-1 tvg-id="CCTV07" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV07.png" group-title="河南联通_182.122.229.114:8888",CCTV07
+#EXTINF:-1 tvg-id="CCTV07" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-07.png" group-title="河南联通_182.122.229.114:8888",CCTV-07
 http://182.122.229.114:8888/hls/7/index.m3u8
-#EXTINF:-1 tvg-id="CCTV08" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV08.png" group-title="河南联通_182.122.229.114:8888",CCTV08
+#EXTINF:-1 tvg-id="CCTV08" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-08.png" group-title="河南联通_182.122.229.114:8888",CCTV-08
 http://182.122.229.114:8888/hls/8/index.m3u8
-#EXTINF:-1 tvg-id="CCTV09" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV09.png" group-title="河南联通_182.122.229.114:8888",CCTV09
+#EXTINF:-1 tvg-id="CCTV09" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-09.png" group-title="河南联通_182.122.229.114:8888",CCTV-09
 http://182.122.229.114:8888/hls/9/index.m3u8
-#EXTINF:-1 tvg-id="CCTV10" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV10.png" group-title="河南联通_182.122.229.114:8888",CCTV10
+#EXTINF:-1 tvg-id="CCTV10" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-10.png" group-title="河南联通_182.122.229.114:8888",CCTV-10
 http://182.122.229.114:8888/hls/10/index.m3u8
-#EXTINF:-1 tvg-id="CCTV11" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV11.png" group-title="河南联通_182.122.229.114:8888",CCTV11
+#EXTINF:-1 tvg-id="CCTV11" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-11.png" group-title="河南联通_182.122.229.114:8888",CCTV-11
 http://182.122.229.114:8888/hls/11/index.m3u8
-#EXTINF:-1 tvg-id="CCTV12" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV12.png" group-title="河南联通_182.122.229.114:8888",CCTV12
+#EXTINF:-1 tvg-id="CCTV12" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-12.png" group-title="河南联通_182.122.229.114:8888",CCTV-12
 http://182.122.229.114:8888/hls/12/index.m3u8
-#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV13.png" group-title="河南联通_182.122.229.114:8888",CCTV13
+#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-13.png" group-title="河南联通_182.122.229.114:8888",CCTV-13
 http://182.122.229.114:8888/hls/13/index.m3u8
-#EXTINF:-1 tvg-id="CCTV14" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV14.png" group-title="河南联通_182.122.229.114:8888",CCTV14
+#EXTINF:-1 tvg-id="CCTV14" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-14.png" group-title="河南联通_182.122.229.114:8888",CCTV-14
 http://182.122.229.114:8888/hls/14/index.m3u8
-#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV15.png" group-title="河南联通_182.122.229.114:8888",CCTV15
+#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-15.png" group-title="河南联通_182.122.229.114:8888",CCTV-15
 http://182.122.229.114:8888/hls/15/index.m3u8
 #EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://tb.yubo.qzz.io/logo/河南卫视.png" group-title="河南联通_182.122.229.114:8888",河南卫视
 http://182.122.229.114:8888/hls/16/index.m3u8
