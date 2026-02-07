@@ -1,198 +1,247 @@
 [
     {
         "old_host": "223.72.123.57:85",
-        "new_host": "223.72.123.36:85"
+        "new_host": "223.72.123.36:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "139.209.38.129:85",
-        "new_host": "139.209.38.121:85"
+        "new_host": "139.209.38.129:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "139.209.38.129:85",
-        "new_host": "139.209.38.129:85"
+        "new_host": "139.209.38.148:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "139.209.38.129:85",
-        "new_host": "139.209.38.148:85"
+        "new_host": "139.209.38.121:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "118.250.5.198:9999",
-        "new_host": "118.250.5.189:9999"
+        "new_host": "118.250.5.189:9999",
+        "path": "/tsfile/live/0128_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "222.90.25.126:85",
-        "new_host": "222.90.25.126:85"
+        "new_host": "222.90.25.126:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "58.46.31.212:9999",
-        "new_host": "58.46.31.80:9999"
+        "new_host": "58.46.31.80:9999",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "61.143.43.2:9901",
-        "new_host": "61.143.43.2:9901"
+        "new_host": "61.143.43.2:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "1.192.152.170:9901",
-        "new_host": "1.192.152.228:9901"
+        "new_host": "1.192.152.228:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "171.43.65.251:85",
-        "new_host": "171.43.65.68:85"
+        "new_host": "171.43.65.68:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "123.13.155.155:9901",
-        "new_host": "123.13.155.155:9901"
+        "new_host": "123.13.155.155:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "223.13.1.175:85",
-        "new_host": "223.13.1.101:85"
+        "new_host": "223.13.1.101:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "101.66.195.54:85",
-        "new_host": "101.66.195.56:85"
+        "new_host": "101.66.195.56:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "101.66.195.54:85",
-        "new_host": "101.66.195.228:85"
+        "new_host": "101.66.195.228:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "183.7.150.147:808",
-        "new_host": "183.7.150.254:808"
+        "new_host": "183.7.150.254:808",
+        "path": "/hls/105/index.m3u8"
     },
     {
         "old_host": "220.248.187.84:9901",
-        "new_host": "220.248.187.91:9901"
+        "new_host": "220.248.187.91:9901",
+        "path": "/tsfile/live/0128_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "119.50.4.230:85",
-        "new_host": "119.50.4.230:85"
+        "new_host": "119.50.4.230:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "39.77.77.195:85",
-        "new_host": "39.77.77.221:85"
+        "new_host": "39.77.77.221:85",
+        "path": "/tsfile/live/0002_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "125.42.149.99:9901",
-        "new_host": "125.42.149.10:9901"
+        "new_host": "125.42.149.10:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "125.42.149.99:9901",
-        "new_host": "125.42.149.162:9901"
+        "new_host": "125.42.149.162:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "122.137.28.229:9901",
-        "new_host": "122.137.28.229:9901"
+        "new_host": "122.137.28.229:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "171.43.64.63:85",
-        "new_host": "171.43.64.133:85"
+        "new_host": "171.43.64.133:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "101.66.198.60:9901",
-        "new_host": "101.66.198.203:9901"
+        "new_host": "101.66.198.203:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "125.42.151.45:9901",
-        "new_host": "125.42.151.162:9901"
+        "new_host": "125.42.151.162:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "171.38.223.80:8082",
-        "new_host": "171.38.223.80:8082"
+        "new_host": "171.38.223.80:8082",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "175.11.72.39:9999",
-        "new_host": "175.11.72.160:9999"
+        "new_host": "175.11.72.160:9999",
+        "path": "/tsfile/live/1118_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "125.42.148.254:9901",
-        "new_host": "125.42.148.21:9901"
+        "new_host": "125.42.148.21:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "125.125.237.81:85",
-        "new_host": "125.125.237.81:85"
+        "new_host": "125.125.237.81:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "106.119.75.73:9901",
-        "new_host": "106.119.75.16:9901"
-    },
-    {
-        "old_host": "106.119.75.73:9901",
-        "new_host": "106.119.75.222:9901"
+        "new_host": "106.119.75.16:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "221.13.233.79:9901",
-        "new_host": "221.13.233.48:9901"
+        "new_host": "221.13.233.48:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "221.13.233.79:9901",
-        "new_host": "221.13.233.87:9901"
+        "new_host": "221.13.233.87:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "123.10.79.61:808",
-        "new_host": "123.10.79.125:808"
+        "new_host": "123.10.79.125:808",
+        "path": "/hls/1/index.m3u8"
     },
     {
         "old_host": "175.22.69.143:9901",
-        "new_host": "175.22.69.143:9901"
+        "new_host": "175.22.69.143:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "1.197.249.88:85",
-        "new_host": "1.197.249.139:85"
+        "new_host": "1.197.249.139:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "182.122.231.33:8888",
-        "new_host": "182.122.231.28:8888"
+        "new_host": "182.122.231.28:8888",
+        "path": "/hls/1/index.m3u8"
     },
     {
         "old_host": "58.245.255.38:9998",
-        "new_host": "58.245.255.38:9998"
+        "new_host": "58.245.255.38:9998",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "183.7.149.216:808",
-        "new_host": "183.7.149.74:808"
+        "new_host": "183.7.149.74:808",
+        "path": "/hls/105/index.m3u8"
     },
     {
         "old_host": "182.122.229.114:8888",
-        "new_host": "182.122.229.114:8888"
+        "new_host": "182.122.229.114:8888",
+        "path": "/hls/1/index.m3u8"
     },
     {
         "old_host": "110.178.210.130:9003",
-        "new_host": "110.178.210.24:9003"
+        "new_host": "110.178.210.24:9003",
+        "path": "/hls/1/index.m3u8"
     },
     {
         "old_host": "110.178.210.130:9003",
-        "new_host": "110.178.210.162:9003"
+        "new_host": "110.178.210.162:9003",
+        "path": "/hls/1/index.m3u8"
     },
     {
         "old_host": "101.66.199.137:85",
-        "new_host": "101.66.199.87:85"
+        "new_host": "101.66.199.87:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "101.66.199.137:85",
-        "new_host": "101.66.199.176:85"
+        "new_host": "101.66.199.176:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "101.66.199.137:85",
-        "new_host": "101.66.199.242:85"
+        "new_host": "101.66.199.242:85",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "39.164.174.149:9901",
-        "new_host": "39.164.174.149:9901"
+        "new_host": "39.164.174.149:9901",
+        "path": "/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0"
     },
     {
         "old_host": "113.65.162.30:9901",
-        "new_host": "113.65.162.30:9901"
+        "new_host": "113.65.162.58:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "113.65.162.30:9901",
-        "new_host": "113.65.162.58:9901"
+        "new_host": "113.65.162.149:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "113.65.162.30:9901",
-        "new_host": "113.65.162.149:9901"
+        "new_host": "113.65.162.30:9901",
+        "path": "/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     },
     {
         "old_host": "113.233.134.28:3156",
-        "new_host": "113.233.134.28:3156"
+        "new_host": "113.233.134.28:3156",
+        "path": "/tsfile/live/0015_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
+    },
+    {
+        "old_host": "113.233.131.178:3177",
+        "new_host": "113.233.131.178:3177",
+        "path": "/tsfile/live/0015_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0"
     }
 ]
