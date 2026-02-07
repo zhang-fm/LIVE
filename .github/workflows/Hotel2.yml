@@ -29,8 +29,15 @@ jobs:
         run: |
           git config --global user.name "HotelFreshBot"
           git config --global user.email "bot@iptv.com"
-          # 必须 add 整个目录，因为旧文件已被删除，新文件需要被追踪
-          git add reborn_list/ py/scan_map.json
-          # 如果没有任何发现，则不提交
-          git commit -m "IPTV Refresh: $(date +'%Y-%m-%d %H:%M')" || exit 0
+          
+          # 1. 必须包含 blacklist.json
+          git add reborn_list/ py/scan_map.json py/blacklist.json
+          
+          # 2. 检查是否有变化需要提交
+          if git diff --staged --quiet; then
+            print "No changes to commit"
+            exit 0
+          fi
+          
+          git commit -m "IPTV Refresh & Blacklist Updated: $(date +'%Y-%m-%d %H:%M')"
           git push
