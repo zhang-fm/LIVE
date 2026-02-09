@@ -83,7 +83,7 @@ http://58.46.31.191:9999/tsfile/live/0113_1.m3u8?key=txiptv&amp;playlive=1&amp;a
 http://58.46.31.191:9999/tsfile/live/0125_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://tb.yubo.qzz.io/logo/云南卫视.png" group-title="湖南电信_58.46.31.191:9999",云南卫视
 http://58.46.31.191:9999/tsfile/live/0119_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://tb.yubo.qzz.io/logo/上海卫视.png" group-title="湖南电信_58.46.31.191:9999",上海卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://tb.yubo.qzz.io/logo/东方卫视.png" group-title="湖南电信_58.46.31.191:9999",东方卫视
 http://58.46.31.191:9999/tsfile/live/0107_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://tb.yubo.qzz.io/logo/河北卫视.png" group-title="湖南电信_58.46.31.191:9999",河北卫视
 http://58.46.31.191:9999/tsfile/live/0117_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0

@@ -33,7 +33,7 @@ http://139.209.38.121:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.121:85/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://tb.yubo.qzz.io/logo/北京卫视.png" group-title="吉林联通_139.209.38.121:85",北京卫视
 http://139.209.38.121:85/tsfile/live/0122_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://tb.yubo.qzz.io/logo/上海卫视.png" group-title="吉林联通_139.209.38.121:85",上海卫视
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://tb.yubo.qzz.io/logo/东方卫视.png" group-title="吉林联通_139.209.38.121:85",东方卫视
 http://139.209.38.121:85/tsfile/live/0107_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://tb.yubo.qzz.io/logo/江苏卫视.png" group-title="吉林联通_139.209.38.121:85",江苏卫视
 http://139.209.38.121:85/tsfile/live/0127_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
