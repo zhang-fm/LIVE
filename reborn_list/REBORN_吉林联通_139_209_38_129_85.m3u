@@ -29,6 +29,8 @@ http://139.209.38.129:85/tsfile/live/0013_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/0014_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-15.png" group-title="吉林联通_139.209.38.129:85",CCTV-15
 http://139.209.38.129:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-16" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-16.png" group-title="吉林联通_139.209.38.129:85",CCTV-16
+http://139.209.38.129:85/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-17.png" group-title="吉林联通_139.209.38.129:85",CCTV-17
 http://139.209.38.129:85/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://tb.yubo.qzz.io/logo/北京卫视.png" group-title="吉林联通_139.209.38.129:85",北京卫视
@@ -101,7 +103,7 @@ http://139.209.38.129:85/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://tb.yubo.qzz.io/logo/嘉佳卡通.png" group-title="吉林联通_139.209.38.129:85",嘉佳卡通
 http://139.209.38.129:85/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="上海炫动卡通" tvg-logo="https://tb.yubo.qzz.io/logo/上海炫动卡通.png" group-title="吉林联通_139.209.38.129:85",上海炫动卡通
+#EXTINF:-1 tvg-id="炫动卡通" tvg-logo="https://tb.yubo.qzz.io/logo/炫动卡通.png" group-title="吉林联通_139.209.38.129:85",炫动卡通
 http://139.209.38.129:85/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV-5PIUS" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-5.png" group-title="吉林联通_139.209.38.129:85",CCTV-5
 http://139.209.38.129:85/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -139,15 +141,15 @@ http://139.209.38.129:85/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="怀旧剧场" tvg-logo="https://tb.yubo.qzz.io/logo/怀旧剧场.png" group-title="吉林联通_139.209.38.129:85",怀旧剧场
 http://139.209.38.129:85/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视生活" tvg-logo="https://tb.yubo.qzz.io/logo/吉视生活.png" group-title="吉林联通_139.209.38.129:85",吉视生活
+#EXTINF:-1 tvg-id="吉林生活" tvg-logo="https://tb.yubo.qzz.io/logo/吉林生活.png" group-title="吉林联通_139.209.38.129:85",吉林生活
 http://139.209.38.129:85/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视影视" tvg-logo="https://tb.yubo.qzz.io/logo/吉视影视.png" group-title="吉林联通_139.209.38.129:85",吉视影视
+#EXTINF:-1 tvg-id="吉林影视" tvg-logo="https://tb.yubo.qzz.io/logo/吉林影视.png" group-title="吉林联通_139.209.38.129:85",吉林影视
 http://139.209.38.129:85/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视乡村" tvg-logo="https://tb.yubo.qzz.io/logo/吉视乡村.png" group-title="吉林联通_139.209.38.129:85",吉视乡村
+#EXTINF:-1 tvg-id="吉林乡村" tvg-logo="https://tb.yubo.qzz.io/logo/吉林乡村.png" group-title="吉林联通_139.209.38.129:85",吉林乡村
 http://139.209.38.129:85/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="家有购物" tvg-logo="https://tb.yubo.qzz.io/logo/家有购物.png" group-title="吉林联通_139.209.38.129:85",家有购物
 http://139.209.38.129:85/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视7频道" tvg-logo="https://tb.yubo.qzz.io/logo/吉视7频道.png" group-title="吉林联通_139.209.38.129:85",吉视7频道
+#EXTINF:-1 tvg-id="吉林综艺文化" tvg-logo="https://tb.yubo.qzz.io/logo/吉林综艺文化.png" group-title="吉林联通_139.209.38.129:85",吉林综艺文化
 http://139.209.38.129:85/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://tb.yubo.qzz.io/logo/延边卫视.png" group-title="吉林联通_139.209.38.129:85",延边卫视
 http://139.209.38.129:85/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -173,15 +175,15 @@ http://139.209.38.129:85/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="武术世界" tvg-logo="https://tb.yubo.qzz.io/logo/武术世界.png" group-title="吉林联通_139.209.38.129:85",武术世界
 http://139.209.38.129:85/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="中学生频道" tvg-logo="https://tb.yubo.qzz.io/logo/中学生频道.png" group-title="吉林联通_139.209.38.129:85",中学生频道
+#EXTINF:-1 tvg-id="中学生" tvg-logo="https://tb.yubo.qzz.io/logo/中学生.png" group-title="吉林联通_139.209.38.129:85",中学生
 http://139.209.38.129:85/tsfile/live/1042_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春1" tvg-logo="https://tb.yubo.qzz.io/logo/长春1.png" group-title="吉林联通_139.209.38.129:85",长春1
+#EXTINF:-1 tvg-id="长春综合" tvg-logo="https://tb.yubo.qzz.io/logo/长春综合.png" group-title="吉林联通_139.209.38.129:85",长春综合
 http://139.209.38.129:85/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春2" tvg-logo="https://tb.yubo.qzz.io/logo/长春2.png" group-title="吉林联通_139.209.38.129:85",长春2
+#EXTINF:-1 tvg-id="长春文旅体育" tvg-logo="https://tb.yubo.qzz.io/logo/长春文旅体育.png" group-title="吉林联通_139.209.38.129:85",长春文旅体育
 http://139.209.38.129:85/tsfile/live/1044_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春3" tvg-logo="https://tb.yubo.qzz.io/logo/长春3.png" group-title="吉林联通_139.209.38.129:85",长春3
+#EXTINF:-1 tvg-id="长春市民生活" tvg-logo="https://tb.yubo.qzz.io/logo/长春市民生活.png" group-title="吉林联通_139.209.38.129:85",长春市民生活
 http://139.209.38.129:85/tsfile/live/1045_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春4" tvg-logo="https://tb.yubo.qzz.io/logo/长春4.png" group-title="吉林联通_139.209.38.129:85",长春4
+#EXTINF:-1 tvg-id="榆树综合" tvg-logo="https://tb.yubo.qzz.io/logo/榆树综合.png" group-title="吉林联通_139.209.38.129:85",榆树综合
 http://139.209.38.129:85/tsfile/live/1046_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://tb.yubo.qzz.io/logo/吉林卫视.png" group-title="吉林联通_139.209.38.129:85",吉林卫视
 http://139.209.38.129:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -189,9 +191,7 @@ http://139.209.38.129:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1048_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="松原2" tvg-logo="https://tb.yubo.qzz.io/logo/松原2.png" group-title="吉林联通_139.209.38.129:85",松原2
 http://139.209.38.129:85/tsfile/live/1049_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV-16" tvg-logo="https://tb.yubo.qzz.io/logo/CCTV-16.png" group-title="吉林联通_139.209.38.129:85",CCTV-16
-http://139.209.38.129:85/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="每日影院" tvg-logo="https://tb.yubo.qzz.io/logo/每日影院.png" group-title="吉林联通_139.209.38.129:85",每日影院
+#EXTINF:-1 tvg-id="环球奇观" tvg-logo="https://tb.yubo.qzz.io/logo/环球奇观.png" group-title="吉林联通_139.209.38.129:85",环球奇观
 http://139.209.38.129:85/tsfile/live/1052_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="幸福剧场" tvg-logo="https://tb.yubo.qzz.io/logo/幸福剧场.png" group-title="吉林联通_139.209.38.129:85",幸福剧场
+#EXTINF:-1 tvg-id="新动漫" tvg-logo="https://tb.yubo.qzz.io/logo/新动漫.png" group-title="吉林联通_139.209.38.129:85",新动漫
 http://139.209.38.129:85/tsfile/live/1051_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
