@@ -29,24 +29,30 @@ jobs:
         run: |
           git config --global user.name "HotelFreshBot"
           git config --global user.email "bot@iptv.com"
+          git config --global core.quotepath false
 
-          # 1. 先拉取远程的最新更改（确保本地是最新的）
-          # 这步不会影响你刚才生成的那些新文件，因为它们还没被 git add
+          # 1. 强制将所有新生成的文件（包括未追踪的）暂存起来
+          git add .
+          
+          # 2. 将这些修改暂时存入“储藏室”(stash)
+          git stash
+
+          # 3. 现在环境干净了，执行拉取并变基
           git pull origin main --rebase
 
-          # 2. 现在再添加你生成的新文件
+          # 4. 把刚才生成的扫描结果从“储藏室”拿回来
+          # 如果有冲突，git 会优先保留你刚才扫出来的结果
+          git stash pop || echo "No stash to pop or minor conflict handled"
+
+          # 5. 重新添加我们需要的文件
           git add reborn_list/ py/scan_map.json py/blacklist.json
           
-          # 3. 检查是否有变化需要提交
+          # 6. 检查是否有真正的内容变化
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           
-          # 4. 提交并推送
-          git commit -m "IPTV Refresh & Blacklist Updated: $(date +'%Y-%m-%d %H:%M') [skip ci]"
-          git push origin main
-          
-          # 4. 提交并推送
+          # 7. 提交并推送
           git commit -m "IPTV Refresh & Blacklist Updated: $(date +'%Y-%m-%d %H:%M') [skip ci]"
           git push origin main
