@@ -29,6 +29,8 @@ http://139.209.38.129:85/tsfile/live/0013_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/0014_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",CCTV15-音乐
 http://139.209.38.129:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV-16" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",CCTV-16
+http://139.209.38.129:85/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",CCTV17
 http://139.209.38.129:85/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",北京卫视
@@ -101,7 +103,7 @@ http://139.209.38.129:85/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",嘉佳卡通
 http://139.209.38.129:85/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="上海炫动卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",上海炫动卡通
+#EXTINF:-1 tvg-id="炫动卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",炫动卡通
 http://139.209.38.129:85/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV-5PIUS" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",CCTV-5PIUS
 http://139.209.38.129:85/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -139,15 +141,15 @@ http://139.209.38.129:85/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="怀旧剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",怀旧剧场
 http://139.209.38.129:85/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉视生活
+#EXTINF:-1 tvg-id="吉林生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉林生活
 http://139.209.38.129:85/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉视影视
+#EXTINF:-1 tvg-id="吉林影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉林影视
 http://139.209.38.129:85/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视乡村" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉视乡村
+#EXTINF:-1 tvg-id="吉林乡村" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉林乡村
 http://139.209.38.129:85/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="家有购物" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",家有购物
 http://139.209.38.129:85/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="吉视7频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉视7频道
+#EXTINF:-1 tvg-id="吉林综艺文化" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉林综艺文化
 http://139.209.38.129:85/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="延边卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",延边卫视
 http://139.209.38.129:85/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -173,15 +175,15 @@ http://139.209.38.129:85/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="武术世界" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",武术世界
 http://139.209.38.129:85/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="中学生频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",中学生频道
+#EXTINF:-1 tvg-id="中学生" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",中学生
 http://139.209.38.129:85/tsfile/live/1042_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春1
+#EXTINF:-1 tvg-id="长春综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春综合
 http://139.209.38.129:85/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春2
+#EXTINF:-1 tvg-id="长春文旅体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春文旅体育
 http://139.209.38.129:85/tsfile/live/1044_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春3
+#EXTINF:-1 tvg-id="长春市民生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春市民生活
 http://139.209.38.129:85/tsfile/live/1045_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="长春4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",长春4
+#EXTINF:-1 tvg-id="榆树综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",榆树综合
 http://139.209.38.129:85/tsfile/live/1046_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",吉林卫视
 http://139.209.38.129:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
@@ -189,9 +191,7 @@ http://139.209.38.129:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;a
 http://139.209.38.129:85/tsfile/live/1048_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="松原2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",松原2
 http://139.209.38.129:85/tsfile/live/1049_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV-16" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",CCTV-16
-http://139.209.38.129:85/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="每日影院" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",每日影院
+#EXTINF:-1 tvg-id="环球奇观" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",环球奇观
 http://139.209.38.129:85/tsfile/live/1052_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="幸福剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",幸福剧场
+#EXTINF:-1 tvg-id="新动漫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="吉林省松原市长岭县酒店 吉林联通",新动漫
 http://139.209.38.129:85/tsfile/live/1051_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
