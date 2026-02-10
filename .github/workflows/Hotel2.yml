@@ -29,19 +29,23 @@ jobs:
         run: |
           git config --global user.name "HotelFreshBot"
           git config --global user.email "bot@iptv.com"
-          
-          # 1. 添加所有变动的文件
+
+          # 1. 先拉取远程的最新更改（确保本地是最新的）
+          # 这步不会影响你刚才生成的那些新文件，因为它们还没被 git add
+          git pull origin main --rebase
+
+          # 2. 现在再添加你生成的新文件
           git add reborn_list/ py/scan_map.json py/blacklist.json
           
-          # 2. 检查是否有变化需要提交
+          # 3. 检查是否有变化需要提交
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           
-          # 3. 关键步骤：先拉取远程更新并变基，解决冲突
-          # 使用 --rebase 可以保持提交历史是一条直线
-          git pull --rebase origin main
+          # 4. 提交并推送
+          git commit -m "IPTV Refresh & Blacklist Updated: $(date +'%Y-%m-%d %H:%M') [skip ci]"
+          git push origin main
           
           # 4. 提交并推送
           git commit -m "IPTV Refresh & Blacklist Updated: $(date +'%Y-%m-%d %H:%M') [skip ci]"
