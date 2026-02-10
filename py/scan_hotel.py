@@ -16,125 +16,113 @@ HEADERS = {"User-Agent": "Lavf/58.29.100"}
 # ==========================================
 
 def load_json(file_path):
-    """通用 JSON 加载"""
     if os.path.exists(file_path):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return data if isinstance(data, list) else []
-        except Exception as e:
-            print(f"⚠️ 读取 {file_path} 异常: {e}")
+        except Exception:
             return []
     return []
 
 def save_json(file_path, data):
-    """通用 JSON 保存"""
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
+def check_url(url):
+    """单链接探测"""
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, stream=True)
+        if r.status_code == 200:
+            return url
+    except:
+        pass
+    return None
+
 def run_scan():
     print("\n" + "="*50)
-    print("🚀 酒店源基因扫描任务开始 (Actions 持久化版)")
+    print("🚀 酒店源基因扫描任务 (预检优化版)")
     print("="*50)
 
-    # 1. 加载黑名单 (旧的 old_host 集合)
-    blacklist = load_json(BLACKLIST_FILE)
-    blacklist_set = set(blacklist)
-    print(f"🚫 已加载黑名单记录: {len(blacklist_set)} 条")
-
-    tasks = {} 
-    if not os.path.exists(HOTEL_DIR):
-        print(f"❌ 错误: 找不到目录 {HOTEL_DIR}")
-        return
+    blacklist = set(load_json(BLACKLIST_FILE))
+    scan_results = [] # 最终存活映射
     
-    # 2. 提取基因：遍历 hotel 文件夹下的 m3u
+    # 1. 提取所有原始基因
+    raw_genes = [] 
+    if not os.path.exists(HOTEL_DIR): return
+
     for file in os.listdir(HOTEL_DIR):
         if file.endswith(".m3u") and not file.startswith("REBORN"):
             file_path = os.path.join(HOTEL_DIR, file)
-            try:
-                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                    content = f.read()
-                    # 匹配 http://ip:port/path 格式
-                    urls = re.findall(r'http://([\d\.]+:\d+)(/[^\s,]+)', content)
-                    for host, path in urls:
-                        # 如果该服务器在黑名单中，直接跳过
-                        if host in blacklist_set:
-                            continue
-                        
-                        prefix = ".".join(host.split('.')[:3])
-                        port = host.split(':')[-1]
-                        key = f"{prefix}:{port}"
-                        if key not in tasks:
-                            tasks[key] = {"old_host": host, "path": path}
-            except Exception as e:
-                print(f"⚠️ 处理文件 {file} 失败: {e}")
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                content = f.read()
+                urls = re.findall(r'http://([\d\.]+:\d+)(/[^\s,]+)', content)
+                for host, path in urls:
+                    if host not in blacklist:
+                        raw_genes.append({"host": host, "path": path})
 
-    print(f"📊 待探测有效网段: {len(tasks)} 个")
-    if not tasks:
-        print("💡 没有新任务，跳过扫描。")
-        return
+    # 去重
+    unique_genes = {g['host']: g['path'] for g in raw_genes}
+    print(f"📋 发现待检测原始 Host: {len(unique_genes)} 个")
 
-    scan_results = []
-    new_dead_hosts = [] # 记录本次全段失效的 old_host
-    
-    # 3. 逐段探测
-    for key, info in tasks.items():
+    # 2. 第一阶段：预检原始 IP 是否存活
+    print(f"🔍 正在进行第一阶段：原始 IP 自检...")
+    survived_original_hosts = set()
+    to_scan_tasks = {} # 真正需要扫段的
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        future_to_host = {executor.submit(check_url, f"http://{h}{p}"): h for h, p in unique_genes.items()}
+        for future in concurrent.futures.as_completed(future_to_host):
+            host = future_to_host[future]
+            if future.result():
+                survived_original_hosts.add(host)
+                # 自己就是活的，直接存入结果
+                scan_results.append({"old_host": host, "new_host": host, "path": unique_genes[host]})
+            else:
+                # 原始 IP 挂了，准备扫它所在的 C 段
+                prefix = ".".join(host.split('.')[:3])
+                port = host.split(':')[-1]
+                key = f"{prefix}:{port}"
+                if key not in to_scan_tasks:
+                    to_scan_tasks[key] = {"old_host": host, "path": unique_genes[host]}
+
+    print(f"✅ 自检完成: {len(survived_original_hosts)} 个原始 IP 依然存活")
+    print(f"📡 剩余 {len(to_scan_tasks)} 个网段需要扫段复活")
+
+    # 3. 第二阶段：针对失联网段进行 C 段扫描
+    new_dead_hosts = []
+    for key, info in to_scan_tasks.items():
         prefix, port = key.split(':')
-        # 构造该 C 段所有 255 个可能的 IP 地址
-        scan_list = [f"http://{prefix}.{i}:{port}{info['path']}" for i in range(1, 256)]
+        scan_list = [f"http={prefix}.{i}:{port}{info['path']}" for i in range(1, 256)]
         
         valid_found = []
-        pbar = tqdm(total=len(scan_list), desc=f"📡 {prefix}.x", bar_format='{l_bar}{bar:20}{r_bar}')
+        pbar = tqdm(total=len(scan_list), desc=f"📡 扫描段 {prefix}.x", bar_format='{l_bar}{bar:20}{r_bar}')
         
-        def check_url(url):
-            try:
-                # 使用 stream=True 避免下载大文件，只检测响应头
-                r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, stream=True)
-                if r.status_code == 200:
-                    return url
-            except:
-                pass
-            return None
-
         with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            futures = [executor.submit(check_url, u) for u in scan_list]
+            futures = [executor.submit(check_url, u.replace("http=","http://")) for u in scan_list]
             for future in concurrent.futures.as_completed(futures):
                 res = future.result()
                 if res:
                     new_host = urlparse(res).netloc
                     valid_found.append(new_host)
-                    pbar.write(f"  ✨ [存活] -> {new_host}")
+                    pbar.write(f"  ✨ [复活] -> {new_host}")
                 pbar.update(1)
         pbar.close()
-        
-        # 判定：如果这一段 1-255 一个活的都没有，把原始 old_host 拉黑
+
         if not valid_found:
             new_dead_hosts.append(info['old_host'])
-            print(f"💀 段 {prefix}.x 确认失效，加入黑名单")
         else:
             for v_host in valid_found:
-                scan_results.append({
-                    "old_host": info['old_host'], 
-                    "new_host": v_host,
-                    "path": info['path']
-                })
+                scan_results.append({"old_host": info['old_host'], "new_host": v_host, "path": info['path']})
 
-    # 4. 结果持久化
-    # 保存存活 IP 映射供 rebuild_m3u.py 使用
-    if scan_results:
-        save_json(MAP_FILE, scan_results)
-        print(f"💾 存活映射已更新: {MAP_FILE}")
-
-    # 更新并保存黑名单
+    # 4. 持久化
+    save_json(MAP_FILE, scan_results)
     if new_dead_hosts:
-        updated_blacklist = list(set(blacklist + new_dead_hosts))
+        updated_blacklist = list(set(list(blacklist) + new_dead_hosts))
         save_json(BLACKLIST_FILE, updated_blacklist)
-        print(f"🚫 黑名单已同步，当前总数: {len(updated_blacklist)}")
 
-    print("\n" + "="*50)
-    print(f"✅ 任务结束。新增存活: {len(scan_results)} | 新拉黑: {len(new_dead_hosts)}")
-    print("="*50 + "\n")
+    print(f"\n✨ 扫描结束！总计可用 Host: {len(scan_results)} | 彻底失效拉黑: {len(new_dead_hosts)}")
 
 if __name__ == "__main__":
     run_scan()
